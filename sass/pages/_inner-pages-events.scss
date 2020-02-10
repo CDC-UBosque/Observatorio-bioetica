@@ -1,0 +1,198 @@
+// ------------------- Content split by next events block  ------------------- //
+.page-node-type-evento{
+	.region-content{
+		background: $color_brand_white;
+		@include inline-block(top);
+		
+		// block streaming
+		.contenedor-evento-streaming{
+			@include inline-block(top);
+			margin-top: -7.3rem;
+			@media only screen and (max-width: 991px){
+				margin-top: 0;
+			}
+		}
+		
+		// Section next events bottom page
+		section[class*="block-views-blockeventos-block-"]{
+			    margin: 0 4rem 4rem;
+			    
+			    @media only screen and (max-width: 991px){
+					margin-top: 4rem;
+				}
+			    
+			    .view-content{
+				    
+				    .views-row{
+					    @include inline-block(top);
+					    box-sizing: border-box;
+					    width: 30%;
+					    padding: 0;
+					    margin-right: 4%;
+					    &:last-child{
+						    margin-right: 0;
+					    }
+					    @media only screen and (max-width: $tablet-1){
+						    width: 100%;
+					    }
+					    
+				    }
+			    }
+		}
+		
+		// Section left content
+		.node--type-evento{ 
+			padding: 4rem 0 0;
+			@media only screen and (max-width: 991px){
+				padding-bottom: 0;
+			}
+			
+			// Title
+			.field--name-node-title{
+				h2{
+					margin: 0 4rem 3rem;
+					color: $color-aqua;
+					font-family: $font-AG-black;
+					font-size: $font-titles-xl;
+					line-height: $font-titles-xl;
+				}
+			}
+			
+			// Image
+			.field--name-field-imagen-del-evento{
+				//margin: 0 -4rem;
+			}
+			
+			// Content
+			.contenedor-evento-pagina{
+				padding: 4rem;
+				
+				// Author image
+				.field--name-field-imagen-del-autor{
+					@include inline-block(top);
+					float: left;
+					margin-top: -3rem;
+					margin-bottom: 2rem;
+					position: relative;
+					border-radius: 50%;
+					overflow: hidden;
+					border: 3px solid $bg-white;
+					z-index: 10;
+					width: 65px;
+					height: 65px;
+				}
+				
+				// Author name
+				.field--name-field-autor{
+					@include inline-block(top);
+					float: left;
+					font: $font-txt-xl $font-AG-bold;
+					color: $color-aqua;
+					@media only screen and (max-width: 645px){
+						padding: 1rem;
+					}
+				}
+				
+				// Dates
+				.field--name-field-fecha-del-evento{
+					@include inline-block(top);
+					@include grid-porcentaje(5);
+					padding: 1rem;
+					.field--label{
+						font: $font-txt-s $font-AG-bold;
+						text-transform: uppercase;
+					}
+					.field--item{
+						font: $font-txt-s $font-AG-light;
+					}
+				}
+				
+				// Hours
+				.field--name-field-horario{
+					@include inline-block(top);
+					@include grid-porcentaje(5);
+					padding: 1rem;
+					.field--label{
+						font: $font-txt-s $font-AG-bold;
+						text-transform: uppercase;
+					}
+					.field--item{
+						font: $font-txt-s $font-AG-light;
+					}
+				}
+				
+				// Dirigido a
+				.field--name-field-dirigido-a{
+					padding: 1rem;
+					.field--label{
+						font-family: $font-AG-bold;
+						text-transform: uppercase;
+					}
+					.field--item{
+						font-family: $font-AG-light;
+					}
+				}
+				
+				// Place
+				.field--name-field-lugar{
+					padding: 1rem;
+					.field--label{
+						font-family: $font-AG-bold;
+						text-transform: uppercase;
+					}
+					.field--item{
+						font-family: $font-AG-light;
+					}
+				}
+				
+				// Event program pdf
+				.field--name-field-programa-del-evento{
+					padding: 1rem;
+					.field--label{
+						font: $font-txt-s $font-AG-bold;
+						text-transform: uppercase;
+					}
+					.field--item{
+						.file{
+							margin: 1rem 0;
+							border: 1px solid $color-aqua;
+							
+							>span{
+								color: $color-aqua;
+								font: $font-txt-m $font-AG-light;
+								letter-spacing: 1.5px;
+								text-transform: uppercase;
+								border: none;
+								padding: 1rem;
+								.icon{
+									&:before{
+										color: $color-aqua;
+									}
+								}
+							}
+						}
+					}
+				}
+				
+				// Body txt
+				.field--name-body{
+					padding: 1rem 1rem 3rem;
+					margin-bottom: 3rem;
+					position: relative;
+					&:after{
+						position: absolute;
+						content: "";
+						height: 1px;
+						width: 45px;
+						background: $color-aqua;
+						bottom: 0px;
+						left: -4rem;
+					}
+						.more-link a{
+							@include buttons-turq-line;
+						}
+				}
+			}
+		}
+	}
+}

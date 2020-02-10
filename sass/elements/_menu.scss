@@ -1,0 +1,229 @@
+// --------------------------- Logo sup for mobile ----------------------------- //
+div.pre-header{
+	display: none;
+	img{
+	    max-width: 100px;
+	}
+	@media only screen and (max-width: 767px){
+		display: block;
+		position: absolute;
+		z-index: 1;
+		left: 1.5rem;
+		top: 1rem;
+	}
+}
+
+// --------------------------- Menu ----------------------------- //
+header.navbar[role=banner]{
+	background: $color_menu_obsbioetica;
+	padding: 0;
+	-webkit-transition: all 0.2s ease-in-out;                  
+    -moz-transition: all 0.2s ease-in-out;                 
+    -o-transition: all 0.2s ease-in-out;   
+    -ms-transition: all 0.2s ease-in-out;          
+    transition: all 0.2s ease-in-out;
+	&::before,
+	&::after {
+		content: "";
+		background: $color_menu_obsbioetica;
+		display: block;
+		//width: $bg-demasia-width;
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		top: 0;
+		left: 100%;
+	 }
+	&::after {
+	     left: auto;
+	     right: 100%;
+	 }
+	 
+	 // Button nav responsive
+	 .navbar-toggle{
+		margin-right: 3rem;
+		border-color: $bg-white;
+		-webkit-transition: all 0.2s ease-in-out;                  
+		-moz-transition: all 0.2s ease-in-out;                 
+		-o-transition: all 0.2s ease-in-out;   
+		-ms-transition: all 0.2s ease-in-out;          
+		transition: all 0.2s ease-in-out;
+		&:hover,
+		&:focus{
+			background-color: $color-aqua;
+		}
+		
+		// lines inside button
+		.icon-bar{
+			background-color: $bg-white;
+		}
+	 }
+	 
+	 // Nav non responsive
+	 .navbar-collapse{
+		 border-bottom: none;
+		 padding: 0;
+		 text-align: right;
+		 
+		 // Logo
+		 section:nth-child(1){
+			 @include inline-block(top);
+			 float: left;
+			 margin-top: 0.9rem;
+			 a{
+				 &:after{
+					 display: none;
+				 }
+			 }
+			 img{
+				 max-width: 100px;
+			 }
+			 @media only screen and (max-width: 767px){
+				 display: none;
+			 }
+		 }
+		 
+		 // Nav
+		 nav[role=navigation]{
+			 @include inline-block(top);
+			 @media only screen and (max-width: 767px){
+				@include grid-porcentaje(10);
+				display: block;
+				margin: auto;
+				text-align: left;
+			 }
+			 // links
+			 .menu--main{
+				 
+				 li{
+					 a{
+						color: $color-green-header-2;
+						font-size: $font-menu;
+						font-family: $font-AG-bold;
+						text-transform: uppercase;
+						position: relative;
+						&:before{
+							position: absolute;
+							content: "";
+							height: 1px;
+							width: 0%;
+							left: 0%;
+							background: $color-green-header-2;
+							bottom: 15%;
+							visibility: hidden;
+						}
+						&:hover{
+							text-decoration: none;
+							color: $color-green-header-2;
+							&:before{
+								visibility: visible;
+								width: 100%;
+							}
+							&:after{
+								visibility: hidden;
+							}
+						}
+					}
+				 }
+				 
+				 // Active
+				 li.active{
+					 a{
+						 background: none;
+						 position: relative;
+						 &:before{
+							position: absolute;
+							content: "";
+							height: 1px;
+							width: 100%;
+							left: 0%;
+							background: $color-green-header-2;
+							bottom: 15%;
+							visibility: visible;
+						}
+					 }
+				 }
+				 
+				 // Expanded
+				 li.expanded{
+					 // Link button
+					 a{
+						 background: none;
+					 }
+					 
+					 // Box container
+					 .dropdown-menu{
+						 border-top: 4px solid $color-aqua;
+						 padding: 0 2rem;
+						 
+						 a{
+							 padding: 1rem 0;
+							 color: $color-font;
+							 font-family: $font-AG-regular;
+							 position: relative;
+							&:before{
+								position: absolute;
+								content: "";
+								height: 1px;
+								width: 0%;
+								left: 0%;
+								background: $color-green-header-2;
+								bottom: 15%;
+								visibility: hidden;
+							}
+							&:hover{
+								text-decoration: none;
+								color: $color-green-header-2;
+								&:before{
+									visibility: visible;
+									width: 100%;
+								}
+								&:after{
+									visibility: hidden;
+								}
+							}
+						 }
+						 
+						 li.active{
+							 a{
+								 &:before{
+									width: 100%;
+									visibility: visible;
+								}
+							 }
+						 }
+					 }
+				 }
+			 }
+		 }
+		 
+		 // Gtranslate
+		 .block-gtranslate-block{
+			@include inline-block(top);
+			margin-top: 0.7rem;
+			@media only screen and (max-width: 767px){
+				@include grid-porcentaje(10	);
+				display: block;
+				margin: 0 auto 2rem;
+			 }
+			 select{
+				 @include latoregular(13px);
+				 @include estilo-base-input;
+				 color: $color_gray_60;
+				 width: 100%;
+				 background: url('../images/ArrowGreenDown.svg') no-repeat 98% 50% white;
+				 //background-position: calc(100% - 14px) 50%;
+				 appearance: none;
+				 text-indent: 1px;
+				 text-overflow: '';
+				 height: 25px;
+				 padding-left: 10px;
+				 margin-top: 3px;
+				 -webkit-appearance: button;
+				 &::-ms-expand {
+				     display: none;
+				 }
+			}
+		 }
+	 }
+}

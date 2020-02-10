@@ -1,0 +1,118 @@
+// ------------------- Editorial repository page  ------------------- //
+section[class*="block-views-blockeditorial-repositorio-block-"]{
+	
+	.view-content{
+		padding: 3rem 0 3rem 3rem;
+		@media only screen and (max-width: $tablet-2){
+			text-align: center;
+		}
+		
+		// Each block of information
+		.views-row {
+			padding-right: 2rem;
+			@include inline-block(top);
+			@include grid-porcentaje(3);
+			background: $bg-white;
+			width: 31%;
+			margin: 0 2rem 3rem 0;
+			padding: 0 0 3rem;
+			&:nth-child(3){
+				margin-right: 0;
+			}
+			@media only screen and (max-width: 991px){
+				@include grid-porcentaje(5);
+				padding: 0 0 3rem;
+				&:nth-child(even){
+					margin-right: 0;
+				}
+				&:nth-child(odd){
+					margin: 0 2rem 3rem 0;
+				}
+			}
+			@media only screen and (max-width: $tablet-2){
+				@include grid-porcentaje(10);
+				padding: 0 0 3rem;
+				text-align: initial;
+				&:nth-child(even){
+					margin: 0 auto 3rem;
+				}
+				&:nth-child(odd){
+					margin: 0 auto 3rem;
+				}
+				&:last-child{
+					margin-bottom: 0;
+				}
+			}
+			
+			// Image 
+			.views-field-field-imagen-del-editorial{
+				.field-content{
+					a{
+						display: block;
+						overflow: hidden;
+						img{
+							@media only screen and (max-width: $tablet-2){
+								width: -webkit-fill-available;
+								width: -moz-fill-available;
+								width: -o-fill-available;
+								width: -ms-fill-available;
+							}
+						}
+					}
+				}
+			}
+			
+			// Author image
+			.views-field-field-imagen-del-autor{
+				@include inline-block(top);
+				float: left;
+				padding: 0 0 0 3rem;
+				margin-top: -4rem;
+				margin-bottom: 2rem;
+				position: relative;
+				
+				.field-content{
+					border-radius: 50%;
+					z-index: 10;
+					position: relative;
+					overflow: hidden;
+					border: 3px solid $bg-white;
+				}
+			}
+			
+			// Author name
+			.views-field-field-autor{
+				@include inline-block(top);
+				float: left;
+				font: $font-txt-xl $font-AG-bold;
+				color: $color-aqua;
+				@media only screen and (max-width: 645px){
+					padding: 0 3rem;
+				}
+			}
+			
+			// Date
+			.views-field-field-fecha{
+					padding: 0 3rem;
+					clear: both;
+					font: $font-txt-s $font-AG-bold;
+					color: $color_gray_50;
+				}
+			
+			// Title
+			.views-field-title{
+					padding: 0 3rem;
+					font: $font-subtitles $font-AG-black;
+				}
+			
+			// Body txt
+			.views-field-body{
+					padding: 0 3rem;
+					.more-link a{
+						@include buttons-turq-line;
+					}
+				}
+			
+		}
+	}
+}

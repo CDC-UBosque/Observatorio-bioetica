@@ -1,0 +1,381 @@
+// ------------------- Home observatorio  ------------------- //
+
+// ------------------- Banner home  ------------------- //
+.region-banner-ext{
+	margin-top: -21px;
+	text-align: center;
+	
+	// Banner
+	.contextual-region.block-content.block-content--type-bloque-cabezote-imagen-titulo{
+		img{
+			@media only screen and (max-width: 798px){
+				height: 24rem;
+			    width: auto;
+			    max-width: initial;
+			    position: relative;
+			    left: -24rem;
+			}
+			
+			@media only screen and (max-width: 550px){
+				width: 150%;
+				left: -24%;
+				height: auto;
+			}
+		}
+	}
+	
+	// Areas styles generals
+	section:nth-child(n+2){
+		border: 25px solid $bg-white;
+		@include inline-block(top);
+		box-sizing: border-box;
+		max-width: 25rem;
+		padding: 3rem 2rem;
+		margin: -10rem 0.4rem 0;
+		text-align: left;
+		
+		@media only screen and (max-width: 798px){
+			@include grid-porcentaje(5	);
+			padding: 3rem 2rem;
+			max-width: initial;
+			margin-top: -5rem;
+			
+			&:last-child{
+				margin-top: 0;
+			}
+		}
+		
+		@media only screen and (max-width: 550px){
+			@include grid-porcentaje(10);
+			padding: 3rem 2rem;
+			margin: 0 auto 2rem;
+			&:last-child{
+				margin-bottom: 0;
+			}
+		}
+		
+		// Title
+		.field--name-field-titulo{
+			font: $font-titles $font-AG-bold;
+			color: $bg-white;
+			line-height: $font-titles; 
+		}
+		
+		// Links
+		.field--name-field-enlace{
+			a{
+				@include buttons;
+				@media (max-width: 798px){
+				    margin-top: 5rem;
+				    
+				    &:before{
+					    top: -3rem;
+				    }
+				}
+			}
+		}
+	}
+	
+	// Areas colors
+	section:nth-child(2){
+		background: $color-bys;
+	}
+	
+	section:nth-child(3){
+		background: $color-bya;
+	}
+	
+	section:nth-child(4){
+		background: $color-bye;
+	}
+}
+
+// ------------------- Content regions  ------------------- //
+.path-frontpage{
+	.main-container{
+		margin-top: 3rem;
+		
+		.region-content{
+			background: none;
+			
+			// Hide element from home
+			.views-element-container.form-group{
+				display: none;
+			}
+			
+			// Puede interesarle
+			.puede-interesarle{
+				background: $color-pi;
+				@include inline-block(top);
+				@include grid-porcentaje(3);
+				float: left;
+				padding: 3rem;
+				
+				@media only screen and (max-width: 991px){
+					@include grid-porcentaje(5);
+					padding: 3rem;
+				}
+				
+				@media only screen and (max-width: $tablet-1){
+					@include grid-porcentaje(12);
+					padding: 3rem;
+				}
+				
+				// Title
+				.block-title{
+					border-bottom: 1px solid $color-font-brown;
+					margin: -3rem -3rem 0;
+					padding: 2rem 3rem;
+				}
+				
+				.field--type-text-with-summary{
+					margin-top: 2rem;
+					
+					p{
+						&:last-child{
+							a{
+								margin-bottom: 0px;
+								&:before{
+									visibility: hidden;
+								}
+							}
+						}
+						
+						// Strongs
+						strong{
+							font-family: $font-AG-black;
+						}
+						
+						// Links
+						a{
+							@include buttons-brown;
+						}
+					}
+				}
+			}
+			
+			// Editorial
+			section[class*="block-views-blockeditorial-repositorio-block-"] {
+				@include inline-block(top);
+				@include grid-porcentaje(4);
+				float: left;
+				position: relative;
+				
+				@media only screen and (max-width: 991px){
+					@include grid-porcentaje(7);
+					
+					.view-content{
+						.views-field-field-imagen-del-editorial img{
+							width: 100%;
+						}
+					}
+				}
+				
+				@media only screen and (max-width: $tablet-1){
+					@include grid-porcentaje(12);
+					padding: 0;
+					margin-top: 3rem;
+				}
+				
+				.views-element-container{
+					display: initial;
+					
+					// Header title
+					.view-header{
+						font-size: $font-txt-s;
+						font-family: $font-AG-bold;
+						text-transform: uppercase;
+						position: absolute;
+						z-index: 1;
+						top: 3rem;
+						left: 3rem;
+					}
+					
+					// Elements inside view
+					.view-content{
+						padding: 0;
+						
+						// Fix width for home
+						.views-row{
+							@include grid-porcentaje(12);
+							padding: 0 0 3rem;
+						}
+					}
+				}
+			}
+			
+			// Eventos
+			section[class*="block-views-blockeventos-block-"]{
+				@include inline-block(top);
+				@include grid-porcentaje(5);
+				float: left;
+				padding: 0;
+				
+				@media only screen and (max-width: 991px){
+					@include grid-porcentaje(12);
+					padding: 0;
+					margin-top: 3rem;
+				}
+				
+				@media only screen and (max-width: $tablet-1){
+					@include grid-porcentaje(12);
+					padding: 0;
+				}
+				
+				.views-element-container{
+					display: initial;
+				
+					// fix margins
+					.view-header{
+						margin: 0;
+						padding: 1.5rem 3rem;
+					}
+					
+					// fix margins
+					.view-content{
+						padding: 1.5rem 3rem;
+					}
+				}
+			}
+			
+			// Banner promo
+			section[class*="banner-promo"]{
+				@include inline-block(top);
+				@include grid-porcentaje(5);
+				float: left;
+				margin-top: 1rem;
+				padding: 0;
+				
+				@media only screen and (max-width: 991px){
+					@include grid-porcentaje(12);
+					padding: 0;
+					margin-top: 3rem;
+				}
+				
+				@media only screen and (max-width: $tablet-1){
+					@include grid-porcentaje(12);
+					padding: 0;
+				}
+				
+				// Fix lines
+				a{
+					&:after{
+						display: none;
+					}
+				}
+			}
+		}
+	}
+}
+
+// ------------------- Content regions last banner  ------------------- //
+.path-frontpage{
+	
+	.region-content-third{
+		margin-top: 3rem;
+		position: relative;
+		
+		// Content structure
+		.views-row{
+			position: relative;
+			min-height: 38rem;
+			
+			// Image
+			.views-field-field-imagen-streaming{
+				position: absolute;
+				
+				@media only screen and (max-width: $tablet-2){
+					position: relative;
+				}
+			}
+			
+			// Title streaming
+			.views-field-field-nombre-del-streaming{
+				position: relative;
+				text-transform: uppercase;
+				color: $color_menu_obsbioetica;
+				font: $font-txt-xl $font-AG-black;
+				padding: 6rem 3rem 0rem;
+				
+				@media only screen and (max-width: 1201px){
+					padding-top: 2rem;
+				}
+			}
+			
+			// Date streaming
+			.views-field-field-fecha-streaming{
+				position: relative;
+				color: $color_menu_obsbioetica;
+				font: $font-titles-xl $font-AG-light;
+				padding: 0rem 3rem;
+				&:after{
+					position: absolute;
+					content: "";
+					width: 30rem;
+					height: 2px;
+					background: $color_menu_obsbioetica;
+					left: 0;
+					bottom: 0;
+				}
+				
+				@media only screen and (max-width: 991px){
+					font-size: $font-txt-xl;
+				}
+			}
+			
+			// title
+			.views-field-title{
+				position: relative;
+				color: $bg-white;
+				font: $font-brandb-l $font-AG-bold;
+				line-height: $font-brandb-l;
+				padding: 1rem 3rem 0;
+				
+				@media only screen and (max-width: 991px){
+					font-size: $font-subtitles;
+				}
+				
+				@media only screen and (max-width: $tablet-2){
+					color: $color-font;
+				}
+			}
+			
+			// Description streaming
+			.views-field-field-descripcion-streaming{
+				position: relative;
+				color: $bg-white;
+				padding: 1rem 3rem;
+				
+				@media only screen and (max-width: 991px){
+					padding: 0 3rem;
+				}
+				
+				@media only screen and (max-width: $tablet-2){
+					color: $color-font;
+				}
+			}
+			
+			// Description streaming
+			.views-field-field-enlace-al-streaming{
+				position: relative;
+				padding: 1rem 3rem;
+				
+				@media only screen and (max-width: 991px){
+					padding: 0 3rem;
+				}
+				
+				a{
+					@include buttons-white-line;
+					@media only screen and (max-width: $tablet-2){
+						@include buttons-turq-line;
+					}
+					&:hover{
+						&:after{
+							visibility: hidden;
+						}
+					}
+				}
+			}
+		}
+	}
+}

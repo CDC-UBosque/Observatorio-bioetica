@@ -1,0 +1,194 @@
+// ------------------- Content bitacoras  ------------------- //
+.region-content-second{
+	background: $color_brand_white;
+	@include inline-block(top);
+	position: relative;
+	margin-top: -2rem;
+	
+	// Description
+	.descripcion-areas{
+		@include inline-block(top);
+		@include grid-porcentaje(8);
+		padding: 4rem;
+		float: left;
+		position: relative;
+		&:after{
+			position: absolute;
+			content: "";
+			height: 1px;
+			width: 45px;
+			background: $color-aqua;
+			bottom: 0px;
+			left: 0rem;
+		}
+		
+		@media only screen and (max-width: $tablet-2){
+			@include grid-porcentaje(12);
+			padding: 4rem;
+		}
+		
+		.field--name-body{
+			p{
+				font: $font-subtitles $font-AG-regular;
+				line-height: $font-titles;
+			}
+		}
+	}
+	
+	// Section left content
+	section[class*="block-views-blockbitacoras-por-area-block-"]{
+		@include inline-block(top);
+		@include grid-porcentaje(8);
+		padding: 4rem;
+		float: left;
+		position: relative;
+		&:after{
+			position: absolute;
+			content: "";
+			height: 1px;
+			width: 45px;
+			background: $color-aqua;
+			bottom: 0px;
+			left: 0rem;
+		}
+		&:last-child{
+			&:after{
+				display: none;
+			}
+		}
+		
+		@media only screen and (max-width: $tablet-2){
+			@include grid-porcentaje(12);
+			padding: 4rem;
+		}
+		
+		// Title elements
+		.view-header{
+			h3{
+				color: $color-aqua;
+			}
+			p{
+				margin-bottom: 1rem;
+			}
+		}
+		
+		// Accordion
+		.view-content{
+			.views-row{
+				
+				.views-row{
+					margin-bottom: 1rem;
+					&:last-child{
+						margin-bottom: 0;
+					}
+					
+					// Normal state
+					.views-accordion-header{
+						background: none;
+						border: 1px solid $color-aqua;
+						padding: 1.5rem 2rem;
+						position: relative;
+						&:hover{
+							background: $color-aqua;
+							&:after{
+								background-image: url(../images/svg/arrow-obs-down-hover.svg);
+							}
+							
+							.field-content{
+								a{
+									color: $bg-white;
+								}
+							}
+						}
+						
+						&:after{
+							position: absolute;
+							content: "";
+							background-image: url(../images/svg/arrow-obs-down.svg);
+							width: 20px;
+							right: 4%;
+							top: 1rem;
+							height: 20px;
+							background-size: contain;
+							background-repeat: no-repeat;
+						}
+						
+						.ui-icon{
+							display: none;
+						}
+						
+						.field-content{
+							a{
+								color: $color-aqua;
+								padding-right: 2rem;
+								display: block;
+							}
+						}
+					}
+					
+					// Active
+					.views-accordion-header.ui-state-active{
+						border-bottom: 0px;
+						background: $color-aqua;
+						&:after{
+							position: absolute;
+							content: "";
+							background-image: url(../images/svg/arrow-obs-up-hover.svg);
+							width: 20px;
+							right: 4%;
+							top: 1rem;
+							height: 20px;
+							background-size: contain;
+							background-repeat: no-repeat;
+						}
+						
+						.field-content{
+							a{
+								color: $bg-white;
+							}
+						}
+					}
+					
+					// Accordeon content active
+					.ui-accordion-content-active{
+						padding: 0rem 2rem;
+						border-left: 1px solid $color-aqua;
+						border-right: 1px solid $color-aqua;
+						border-bottom: 1px solid $color-aqua;
+						border-top: 0px;
+						height: auto;
+						padding-bottom: 2rem;
+						
+						// TXT
+						.field-content{
+							font: $font-txt-l $font-AG-light;
+						}
+						
+						// Link
+						.more-link-bitacora{
+							a{
+								@include buttons-turq-line;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	
+	// block next events
+	.contenedor-proximos-eventos{
+		@include inline-block(top);
+		@include grid-porcentaje(4);
+		padding: 4rem;
+		top: -7.4rem;
+		position: absolute;
+		right: 0px;
+		@media only screen and (max-width: $tablet-2){
+			@include grid-porcentaje(12);
+			padding: 4rem;
+			top: 0;
+			position: initial;
+		}
+	}
+}

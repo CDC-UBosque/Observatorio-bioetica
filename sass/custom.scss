@@ -1,0 +1,28 @@
+// ------------------------------------ Global elements ------------------------------------ 
+@import 'bootstrap';
+@import 'mixins';
+@import 'fonts';
+@import 'config';
+@import 'artifacts';
+@import 'layout';
+@import 'animate';
+@import 'base';
+
+// ------------------------------------ Elements (footer, header, menus, etc) ------------------------------------ 
+@import 'elements/_menu.scss';
+@import 'elements/_social-media';
+@import 'elements/_footer';
+@import 'elements/_next-events-block';
+@import 'elements/_more-editorial-block';
+@import 'elements/_streamings-block';
+
+// ------------------------------------ Pages ------------------------------------ 
+@import 'pages/_home';
+@import 'pages/_inner-pages-generals';
+@import 'pages/_inner-pages-editorials';
+@import 'pages/_inner-pages-events';
+@import 'pages/_inner-pages-bitacora';
+@import 'pages/_bitacora-generals';
+@import 'pages/_banner-about';
+@import 'pages/_events-repository';
+@import 'pages/_editorial-repository';

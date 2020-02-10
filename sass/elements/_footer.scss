@@ -1,0 +1,32 @@
+footer.footer{
+	font-size: $font-txt-m;
+	margin-bottom: 1rem;
+	
+	p{
+		font-size: $font-txt-m;
+		@media only screen and (max-width: $tablet-2){
+			margin-bottom: 1.5rem;
+		}
+		&:first-child{
+			@include inline-block(top);
+			@include grid-porcentaje(5);
+			a{
+				&:hover{
+					&:after{
+						visibility: hidden;
+					}
+				}
+			}
+			@media only screen and (max-width: $tablet-2){
+				@include grid-porcentaje(10);
+			}
+		}
+		&:nth-child(n+2){
+			@include inline-block(top);
+			@include grid-porcentaje(3);
+			@media only screen and (max-width: $tablet-2){
+				@include grid-porcentaje(10);
+			}
+		}
+	}
+}
