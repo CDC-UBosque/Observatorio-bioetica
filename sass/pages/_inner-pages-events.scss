@@ -1,16 +1,23 @@
 // ------------------- Content split by next events block  ------------------- //
 .page-node-type-evento{
 	.region-content{
-		background: $color_brand_white;
-		@include inline-block(top);
 		
 		// block streaming
 		.contenedor-evento-streaming{
-			@include inline-block(top);
 			margin-top: -7.3rem;
+			margin-top: calc( (1 / 1 * (110% + 0rem) ) - 47rem);
+			align-self: self-start;
+			@include grid-child-column (2, 3);
+			@include grid-child-row (3, 10);
+			
 			@media only screen and (max-width: 991px){
 				margin-top: 0;
 			}
+			
+			@media only screen and (max-width: 798px){
+				@include reset-grid-childs
+			}
+			
 		}
 		
 		// Section next events bottom page
@@ -43,29 +50,53 @@
 		// Section left content
 		.node--type-evento{ 
 			padding: 4rem 0 0;
-			@media only screen and (max-width: 991px){
-				padding-bottom: 0;
+			@include display-grid;
+			@include grid-parent-2-columns (2fr, 1fr);
+			
+			@media only screen and (max-width: 798px){
+				@include grid-parent-1-columns (1fr);
 			}
 			
 			// Title
 			.field--name-node-title{
+				//padding-bottom: calc( (1 / 1 * (150% + 0rem) ) - 165rem);
+				@include grid-child-column (1,2);
+				@include grid-child-row (1, 2);
+				
+				@media only screen and (max-width: 798px){
+					@include reset-grid-childs
+				}
+				
 				h2{
-					margin: 0 4rem 3rem;
+					margin: 0 0 3rem;
 					color: $color-aqua;
 					font-family: $font-AG-black;
 					font-size: $font-titles-xl;
 					line-height: $font-titles-xl;
 				}
+				
 			}
 			
 			// Image
 			.field--name-field-imagen-del-evento{
-				//margin: 0 -4rem;
+				@include grid-child-column (1,3);
+				@include grid-child-row (2, 3);
+				
+				@media only screen and (max-width: 798px){
+					@include reset-grid-childs
+				}
+				
 			}
 			
 			// Content
 			.contenedor-evento-pagina{
 				padding: 4rem;
+				@include grid-child-column (1,2);
+				@include grid-child-row (3, 4);
+				
+				@media only screen and (max-width: 798px){
+					@include reset-grid-childs
+				}
 				
 				// Author image
 				.field--name-field-imagen-del-autor{

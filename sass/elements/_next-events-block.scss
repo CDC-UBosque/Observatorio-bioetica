@@ -1,7 +1,8 @@
 // --------------------------- Next events block ----------------------------- //
 .contenedor-proximos-eventos, section[class*="block-views-blockeventos-block-"]{
-	background: $color-prox-events;
 	padding: 4rem;
+	margin-bottom: 4rem;
+	background: $color-prox-events;
 	
 	// header info
 	.view-header{
@@ -53,6 +54,22 @@
 				}
 			}
 			
+		}
+	}
+	
+	.view-footer{
+		padding: 1.5rem 3rem;
+		a{
+			@include buttons-turq-line;
+			&:before{
+				position: absolute;
+				content: "";
+				height: 1px;
+				width: 50%;
+				left: -3rem;
+				background: $color-aqua;
+				top: -2rem;
+			}
 		}
 	}
 	

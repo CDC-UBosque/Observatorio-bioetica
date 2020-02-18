@@ -1,31 +1,18 @@
 // ------------------- Content split by next events block  ------------------- //
 .region-content{
+	padding-bottom: 1rem;
 	background: $color_brand_white;
-	@include inline-block(top);
 	
-	// block next editoriales
-	.contenedor-bitacora-memorias{
-		@include inline-block(top);
-		@include grid-porcentaje(5);
-		padding: 4rem;
-		@media only screen and (max-width: $tablet-2){
-			@include grid-porcentaje(12);
-			padding: 4rem;
-			top: 0;
-			//margin-bottom: 4rem;
-		}
+	.field--name-node-title{
+		padding: 1rem 3rem;
+	}
+	
+	.field.field--name-body.field--type-text-with-summary.field--label-hidden.field--item{
+		padding: 1rem 3rem;
 	}
 	
 	// Section left content
 	.node--type-bitacora{
-		/*@include inline-block(top);
-		/*@include grid-porcentaje(7);
-		/*padding: 4rem;
-		/*float: left;
-		/*@media only screen and (max-width: $tablet-2){
-			@include grid-porcentaje(12);
-			padding: 4rem;
-		}*/
 		
 		// Title
 		.field--name-node-title{
@@ -101,4 +88,5 @@
 			}
 		}
 	}
+	
 }

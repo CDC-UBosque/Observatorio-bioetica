@@ -5,9 +5,23 @@
 	margin-top: -21px;
 	text-align: center;
 	grid-gap: 2rem;
-	justify-items: center;
+	place-items: self-end;
 	@include display-grid;
-	@include grid-parent-10-columns (1fr, 1fr, 1fr, 10fr, 10fr, 10fr, 10fr, 1fr, 1fr, 1fr);
+	@include grid-parent-6-columns (1fr, 280px, 280px, 280px, 280px, 1fr);
+	
+	@media only screen and (max-width: 1199px){
+		grid-gap: 1rem;
+		@include grid-parent-6-columns (1fr, 1fr, 1fr, 1fr, 1fr, 1fr);
+	}
+	
+	@media only screen and (max-width: 991px){
+		grid-gap: 1rem;
+		@include grid-parent-6-columns (.5fr, 1fr, 1fr, 1fr, 1fr, .5fr);
+	}
+	
+	@media only screen and (max-width: $tablet){
+		@include grid-parent-6-columns (.2fr, 1fr, 1fr, 1fr, 1fr, .2fr);
+	}
 	
 	// Banner
 	.contextual-region.block-content.block-content--type-bloque-cabezote-imagen-titulo{
@@ -29,9 +43,8 @@
 			}
 		}
 	}
-	
 	section:first-child{
-		@include grid-child-column (1, 11);
+		@include grid-child-column (1, 7);
 		@include grid-child-row (1, 2);
 	}
 	
@@ -42,33 +55,38 @@
 		padding: 3rem 2rem;
 		margin: -10rem 0.4rem 0;
 		text-align: left;
+		@include display-grid;
+		@include grid-parent-2-rows (12rem, 1fr);
 		
-		@media only screen and (max-width: 798px){
-			padding: 3rem 2rem;
-			margin-top: -5rem;
+		@media only screen and (max-width: 991px){
+			width: 100%;
+			margin: -6rem 0 0;
 			
-			&:last-child{
-				margin-top: 0;
+			&:nth-child(n+4){
+				margin: 2rem 0.4rem 0;
 			}
+			
 		}
 		
-		@media only screen and (max-width: 550px){
-			padding: 3rem 2rem;
-			margin: 0 auto 2rem;
-			&:last-child{
-				margin-bottom: 0;
-			}
+		@media only screen and (max-width: $tablet-2){
+			margin: 0;
+			@include grid-parent-2-rows (6rem, 1fr);
 		}
 		
 		// Title
 		.field--name-field-titulo{
+			word-break: break-word;
 			font: $font-titles $font-AG-bold;
 			color: $bg-white;
 			line-height: $font-titles; 
+			@include grid-child-row (1, 2);
 		}
 		
 		// Links
 		.field--name-field-enlace{
+			align-self: end;
+			margin-top: 7rem;
+			@include grid-child-row (2, 3);
 			a{
 				@include buttons;
 				@media (max-width: 798px){
@@ -79,32 +97,78 @@
 				    }
 				}
 			}
+			
 		}
+		
 	}
+	
+	
 	
 	// Areas colors
 	section:nth-child(2){
 		background: $color-bys;
-		@include grid-child-column (4, 5);
+		@include grid-child-column (2, 3);
 		@include grid-child-row (2, 3);
+		
+		@media only screen and (max-width: 991px){
+			@include grid-child-column (2, 4);
+		}
+		
+		@media only screen and (max-width: $tablet-2){
+			@include grid-child-column (2, 6);
+			@include grid-child-row (2, 3);
+		}
+		
 	}
 	
 	section:nth-child(3){
 		background: $color-bya;
-		@include grid-child-column (5, 6);
+		@include grid-child-column (3, 4);
 		@include grid-child-row (2, 3);
+		
+		@media only screen and (max-width: 991px){
+			@include grid-child-column (4, 6);
+		}
+		
+		@media only screen and (max-width: $tablet-2){
+			@include grid-child-column (2, 6);
+			@include grid-child-row (3, 4);
+		}
+		
 	}
 	
 	section:nth-child(4){
 		background: $color-bye;
-		@include grid-child-column (6, 7);
+		@include grid-child-column (4, 5);
 		@include grid-child-row (2, 3);
+		
+		@media only screen and (max-width: 991px){
+			@include grid-child-column (2, 4);
+			@include grid-child-row (3, 4);
+		}
+		
+		@media only screen and (max-width: $tablet-2){
+			@include grid-child-column (2, 6);
+			@include grid-child-row (4, 5);
+		}
+		
 	}
 	
 	section:nth-child(5){
-		background: $color-bye;
-		@include grid-child-column (7, 8);
+		background: $color-fde;
+		@include grid-child-column (5, 6);
 		@include grid-child-row (2, 3);
+		
+		@media only screen and (max-width: 991px){
+			@include grid-child-column (4, 6);
+			@include grid-child-row (3, 4);
+		}
+		
+		@media only screen and (max-width: $tablet-2){
+			@include grid-child-column (2, 6);
+			@include grid-child-row (5, 6);
+		}
+		
 	}
 	
 }
@@ -115,10 +179,18 @@
 		margin-top: 3rem;
 		
 		.region-content{
-			grid-gap: 2rem;
+			grid-gap: 3rem;
 			@include display-grid;
-			@include grid-parent-3-columns (1fr, 1fr, 1.4fr);
+			@include grid-parent-3-columns (1fr, 1.4fr, 1.4fr);
 			background: none;
+			
+			@media only screen and (max-width: 991px){
+				@include grid-parent-2-columns (1fr, 1.4fr);
+			}
+			
+			@media only screen and (max-width: $tablet-2){
+				@include grid-parent-1-columns (1fr);
+			}
 			
 			// Hide element from home
 			.views-element-container.form-group{
@@ -127,16 +199,20 @@
 			
 			// Puede interesarle
 			.puede-interesarle{
+				place-self: start;
 				background: $color-pi;
-				float: left;
 				padding: 3rem;
+				@include grid-child-column (1, 2);
+				@include grid-child-row (1, 2);
 				
-				@media only screen and (max-width: $tablet-1){
-					padding: 3rem;
+				@media only screen and (max-width: $tablet-2){
+					@include grid-child-column (1, 2);
+					@include grid-child-row (1, 2);
 				}
 				
 				// Title
 				.block-title{
+					color: $color-font;
 					border-bottom: 1px solid $color-font-brown;
 					margin: -3rem -3rem 0;
 					padding: 2rem 3rem;
@@ -171,19 +247,13 @@
 			// Editorial
 			section[class*="block-views-blockeditorial-repositorio-block-"] {
 				position: relative;
+				place-self: start;
+				@include grid-child-column (2, 3);
+				@include grid-child-row (1, 2);
 				
-				@media only screen and (max-width: 991px){
-					
-					.view-content{
-						.views-field-field-imagen-del-editorial img{
-							width: 100%;
-						}
-					}
-				}
-				
-				@media only screen and (max-width: $tablet-1){
-					padding: 0;
-					margin-top: 3rem;
+				@media only screen and (max-width: $tablet-2){
+					@include grid-child-column (1, 2);
+					@include grid-child-row (2, 3);
 				}
 				
 				.views-element-container{
@@ -206,24 +276,31 @@
 						
 						// Fix width for home
 						.views-row{
-							@include grid-porcentaje(12);
-							padding: 0 0 3rem;
+							width: initial;
+							
 						}
+						
 					}
+					
 				}
+				
 			}
 			
 			// Eventos
 			section[class*="block-views-blockeventos-block-"]{
 				padding: 0;
+				place-self: start;
+				@include grid-child-column (3, 4);
+				@include grid-child-row (1, 3);
 				
 				@media only screen and (max-width: 991px){
-					padding: 0;
-					margin-top: 3rem;
+					@include grid-child-column (1, 3);
+					@include grid-child-row (2, 3);
 				}
 				
-				@media only screen and (max-width: $tablet-1){
-					padding: 0;
+				@media only screen and (max-width: $tablet-2){
+					@include grid-child-column (1, 2);
+					@include grid-child-row (3, 4);
 				}
 				
 				.views-element-container{
@@ -244,16 +321,19 @@
 			
 			// Banner promo
 			section[class*="banner-promo"]{
-				margin-top: 1rem;
 				padding: 0;
+				@include grid-child-column (1, 4);
+				@include grid-child-row (2, 3);
 				
 				@media only screen and (max-width: 991px){
 					padding: 0;
-					margin-top: 3rem;
+					@include grid-child-column (1, 3);
+					@include grid-child-row (3, 4);
 				}
 				
-				@media only screen and (max-width: $tablet-1){
-					padding: 0;
+				@media only screen and (max-width: $tablet-2){
+					@include grid-child-column (1, 2);
+					@include grid-child-row (4, 5);
 				}
 				
 				// Fix lines
@@ -283,9 +363,29 @@
 			.views-field-field-imagen-streaming{
 				position: absolute;
 				
+				&:after{
+					position: absolute;
+					content: "";
+					top:0;
+					left:0;
+					bottom: 0;
+					width: 90%;
+					background: rgb(0,0,0);
+					background: -moz-linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 100%);
+					background: -webkit-linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 100%);
+					background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 100%);
+					filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#000000",endColorstr="#000000",GradientType=1);
+				}
+				
 				@media only screen and (max-width: $tablet-2){
 					position: relative;
+					
+					&:after{
+						display: none;
+					}
+					
 				}
+				
 			}
 			
 			// Title streaming
@@ -299,6 +399,11 @@
 				@media only screen and (max-width: 1201px){
 					padding-top: 2rem;
 				}
+				
+				@media only screen and (max-width: $tablet-2){
+					background: $color_brand_white;
+				}
+				
 			}
 			
 			// Date streaming
@@ -320,6 +425,11 @@
 				@media only screen and (max-width: 991px){
 					font-size: $font-txt-xl;
 				}
+				
+				@media only screen and (max-width: $tablet-2){
+					background: $color_brand_white;
+				}
+				
 			}
 			
 			// title
@@ -336,6 +446,7 @@
 				
 				@media only screen and (max-width: $tablet-2){
 					color: $color-font;
+					background: $color_brand_white;
 				}
 			}
 			
@@ -351,6 +462,7 @@
 				
 				@media only screen and (max-width: $tablet-2){
 					color: $color-font;
+					background: $color_brand_white;
 				}
 			}
 			
@@ -361,6 +473,11 @@
 				
 				@media only screen and (max-width: 991px){
 					padding: 0 3rem;
+				}
+				
+				@media only screen and (max-width: $tablet-2){
+					padding-bottom: 3rem;
+					background: $color_brand_white;
 				}
 				
 				a{
@@ -374,7 +491,11 @@
 						}
 					}
 				}
+				
 			}
+			
 		}
+		
 	}
+	
 }

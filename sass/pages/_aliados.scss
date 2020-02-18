@@ -1,0 +1,70 @@
+// ------------------- aliados  ------------------- //
+
+.aliados-repo-block{
+	padding: 3rem;
+	@include grid-child-column (1, 3);
+	
+	.view-content{
+		grid-gap: 2rem;
+		@include display-grid;
+		@include grid-parent-2-columns (1fr, 1fr);
+		
+		@media only screen and (max-width: 991px){
+			@include grid-parent-2-columns (1fr, 1fr);
+		}
+		
+		@media only screen and (max-width: 798px){
+			@include grid-parent-1-columns (1fr);
+		}
+		
+		@media only screen and (max-width: $tablet-3){
+			@include grid-parent-1-columns (1fr);
+		}
+		
+		.views-row{
+			margin: 0 auto;
+			
+			.layout__region--content{
+				grid-gap: 2rem;
+				@include display-grid;
+				@include grid-parent-2-columns (1fr, 2fr);
+				
+				.field--name-node-title{
+					@include grid-child-column (1, 3);
+					@include grid-child-row (1, 2);
+					
+					h2{
+						font: $font-brandb-m $font-AG-black;
+						color: $color_text;
+					}
+					
+				}
+				
+				.field--type-image{
+					margin-bottom: 1rem;
+					@include grid-child-column (1, 2);
+					@include grid-child-row (2, 3);
+					
+					img{
+						margin: auto;
+					}
+					
+				}
+				
+				.field--name-field-cargo{
+					font: $font-txt-xxl $font-AG-light;
+					@include grid-child-column (2, 3);
+					@include grid-child-row (2, 3);
+				}
+				
+			}
+			
+		}
+		
+	}
+	
+}
+
+
+
+

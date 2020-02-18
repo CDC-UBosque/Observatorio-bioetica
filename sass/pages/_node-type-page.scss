@@ -1,0 +1,45 @@
+// ------------------- aliados  ------------------- //
+
+.page-node-type-page{
+	
+	.region.region-content{
+		background: $bg-white;
+		@include display-grid;
+		@include grid-parent-2-columns (2fr, 1fr);
+		
+		@media only screen and (max-width: 798px){
+			@include grid-parent-1-columns (1fr);
+		}
+		
+		div[data-history-node-id="5"]{  //attribute="value"
+			padding: 4rem;
+			@include grid-child-column (1, 2);
+			@include grid-child-row (1, 2);
+		
+			@media only screen and (max-width: 798px){
+				@include reset-grid-childs;
+			}
+			
+		}
+		
+		// block next events
+		.contenedor-proximos-eventos{
+			padding: 4rem;
+			width: 100%;
+			align-self: self-start;
+			@include grid-child-column (2, 3);
+			@include grid-child-row (1, 2);
+			
+			@media only screen and (max-width: 798px){
+				@include reset-grid-childs;
+			}
+			
+		}
+		
+	}
+	
+}
+
+
+
+

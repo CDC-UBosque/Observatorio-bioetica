@@ -11,10 +11,12 @@
 // ------------------------------------ Elements (footer, header, menus, etc) ------------------------------------ 
 @import 'elements/_menu.scss';
 @import 'elements/_social-media';
+@import 'elements/_videos-iframes';
 @import 'elements/_footer';
 @import 'elements/_next-events-block';
 @import 'elements/_more-editorial-block';
 @import 'elements/_streamings-block';
+@import 'elements/_hide-title-pages';
 
 // ------------------------------------ Pages ------------------------------------ 
 @import 'pages/_home';
@@ -23,6 +25,10 @@
 @import 'pages/_inner-pages-events';
 @import 'pages/_inner-pages-bitacora';
 @import 'pages/_bitacora-generals';
+@import 'pages/_bitacora-detail';
 @import 'pages/_banner-about';
 @import 'pages/_events-repository';
 @import 'pages/_editorial-repository';
+@import 'pages/_equipo';
+@import 'pages/_aliados';
+@import 'pages/_node-type-page';

@@ -4,7 +4,6 @@
 	font-size: $font-txt-xxl;
 	border: 2px solid;
 	letter-spacing: 3px;
-	margin: 12rem auto 0;
     position: relative;
     display: block;
     padding: 1rem;
@@ -498,6 +497,15 @@
   -ms-grid-row-span: $row-end - $row-start;
 }
 
+@mixin reset-grid-childs{
+	grid-column: initial;
+    -ms-grid-column: initial;
+    -ms-grid-column-span: initial;
+    grid-row: initial;
+    -ms-grid-row: initial;
+    -ms-grid-row-span: initial;
+}
+
 /* title program-card font style */
 //$font_family: 'Acherus_Grotesque',sans-serif;
 
@@ -532,4 +540,110 @@ $font_family_group: $family) {
     &::after {
         right: 100%;
     }
+}
+
+@mixin accordion{
+	.views-row{
+				
+		.views-row{
+			margin-bottom: 1rem;
+			&:last-child{
+				margin-bottom: 0;
+			}
+			
+			// Normal state
+			.views-accordion-header{
+				background: none;
+				border: 4px solid $color-aqua;
+				padding: 1.5rem 6rem 1.5rem 2rem;
+				position: relative;
+				&:hover{
+					background: $color-aqua;
+					&:after{
+						background-image: url(../images/svg/arrow-obs-down-hover.svg);
+					}
+					
+					.field-content{
+						a{
+							color: $bg-white;
+						}
+					}
+				}
+				
+				&:after{
+					position: absolute;
+					content: "";
+					background-image: url(../images/svg/arrow-obs-down.svg);
+					width: 20px;
+					right: 4%;
+					top: 1rem;
+					height: 20px;
+					background-size: contain;
+					background-repeat: no-repeat;
+				}
+				
+				.ui-icon{
+					display: none;
+				}
+				
+				.field-content{
+					a{
+						text-transform: uppercase;
+						font: $font-txt-m $font-brandb;
+						color: $color-aqua;
+						padding-right: 2rem;
+						display: block;
+						letter-spacing: 1.8px;
+					}
+				}
+			}
+			
+			// Active
+			.views-accordion-header.ui-state-active{
+				border-bottom: 0px;
+				background: $color-aqua;
+				&:after{
+					position: absolute;
+					content: "";
+					background-image: url(../images/svg/arrow-obs-up-hover.svg);
+					width: 20px;
+					right: 4%;
+					top: 1rem;
+					height: 20px;
+					background-size: contain;
+					background-repeat: no-repeat;
+				}
+				
+				.field-content{
+					a{
+						color: $bg-white;
+					}
+				}
+			}
+			
+			// Accordeon content active
+			.ui-accordion-content-active{
+				padding: 2rem;
+				border-left: 1px solid $color-aqua;
+				border-right: 1px solid $color-aqua;
+				border-bottom: 1px solid $color-aqua;
+				border-top: 0px;
+				height: auto;
+				padding-bottom: 2rem;
+				
+				// TXT
+				.field-content{
+					font: $font-txt-l $font-AG-light;
+				}
+				
+				// Link
+				.more-link-bitacora{
+					a{
+						@include buttons-turq-line;
+					}
+				}
+			}
+		}
+	}
+	
 }
