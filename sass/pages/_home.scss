@@ -4,9 +4,15 @@
 .region-banner-ext{
 	margin-top: -21px;
 	text-align: center;
+	grid-gap: 2rem;
+	justify-items: center;
+	@include display-grid;
+	@include grid-parent-10-columns (1fr, 1fr, 1fr, 10fr, 10fr, 10fr, 10fr, 1fr, 1fr, 1fr);
 	
 	// Banner
 	.contextual-region.block-content.block-content--type-bloque-cabezote-imagen-titulo{
+		
+		
 		img{
 			@media only screen and (max-width: 798px){
 				height: 24rem;
@@ -24,20 +30,21 @@
 		}
 	}
 	
+	section:first-child{
+		@include grid-child-column (1, 11);
+		@include grid-child-row (1, 2);
+	}
+	
 	// Areas styles generals
 	section:nth-child(n+2){
 		border: 25px solid $bg-white;
-		@include inline-block(top);
 		box-sizing: border-box;
-		max-width: 25rem;
 		padding: 3rem 2rem;
 		margin: -10rem 0.4rem 0;
 		text-align: left;
 		
 		@media only screen and (max-width: 798px){
-			@include grid-porcentaje(5	);
 			padding: 3rem 2rem;
-			max-width: initial;
 			margin-top: -5rem;
 			
 			&:last-child{
@@ -46,7 +53,6 @@
 		}
 		
 		@media only screen and (max-width: 550px){
-			@include grid-porcentaje(10);
 			padding: 3rem 2rem;
 			margin: 0 auto 2rem;
 			&:last-child{
@@ -79,15 +85,28 @@
 	// Areas colors
 	section:nth-child(2){
 		background: $color-bys;
+		@include grid-child-column (4, 5);
+		@include grid-child-row (2, 3);
 	}
 	
 	section:nth-child(3){
 		background: $color-bya;
+		@include grid-child-column (5, 6);
+		@include grid-child-row (2, 3);
 	}
 	
 	section:nth-child(4){
 		background: $color-bye;
+		@include grid-child-column (6, 7);
+		@include grid-child-row (2, 3);
 	}
+	
+	section:nth-child(5){
+		background: $color-bye;
+		@include grid-child-column (7, 8);
+		@include grid-child-row (2, 3);
+	}
+	
 }
 
 // ------------------- Content regions  ------------------- //
@@ -96,6 +115,9 @@
 		margin-top: 3rem;
 		
 		.region-content{
+			grid-gap: 2rem;
+			@include display-grid;
+			@include grid-parent-3-columns (1fr, 1fr, 1.4fr);
 			background: none;
 			
 			// Hide element from home
@@ -106,18 +128,10 @@
 			// Puede interesarle
 			.puede-interesarle{
 				background: $color-pi;
-				@include inline-block(top);
-				@include grid-porcentaje(3);
 				float: left;
 				padding: 3rem;
 				
-				@media only screen and (max-width: 991px){
-					@include grid-porcentaje(5);
-					padding: 3rem;
-				}
-				
 				@media only screen and (max-width: $tablet-1){
-					@include grid-porcentaje(12);
 					padding: 3rem;
 				}
 				
@@ -156,13 +170,9 @@
 			
 			// Editorial
 			section[class*="block-views-blockeditorial-repositorio-block-"] {
-				@include inline-block(top);
-				@include grid-porcentaje(4);
-				float: left;
 				position: relative;
 				
 				@media only screen and (max-width: 991px){
-					@include grid-porcentaje(7);
 					
 					.view-content{
 						.views-field-field-imagen-del-editorial img{
@@ -172,7 +182,6 @@
 				}
 				
 				@media only screen and (max-width: $tablet-1){
-					@include grid-porcentaje(12);
 					padding: 0;
 					margin-top: 3rem;
 				}
@@ -206,19 +215,14 @@
 			
 			// Eventos
 			section[class*="block-views-blockeventos-block-"]{
-				@include inline-block(top);
-				@include grid-porcentaje(5);
-				float: left;
 				padding: 0;
 				
 				@media only screen and (max-width: 991px){
-					@include grid-porcentaje(12);
 					padding: 0;
 					margin-top: 3rem;
 				}
 				
 				@media only screen and (max-width: $tablet-1){
-					@include grid-porcentaje(12);
 					padding: 0;
 				}
 				
@@ -240,20 +244,15 @@
 			
 			// Banner promo
 			section[class*="banner-promo"]{
-				@include inline-block(top);
-				@include grid-porcentaje(5);
-				float: left;
 				margin-top: 1rem;
 				padding: 0;
 				
 				@media only screen and (max-width: 991px){
-					@include grid-porcentaje(12);
 					padding: 0;
 					margin-top: 3rem;
 				}
 				
 				@media only screen and (max-width: $tablet-1){
-					@include grid-porcentaje(12);
 					padding: 0;
 				}
 				
