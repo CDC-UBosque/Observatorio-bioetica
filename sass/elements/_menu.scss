@@ -15,6 +15,7 @@ div.pre-header{
 
 // --------------------------- Menu ----------------------------- //
 header.navbar[role=banner]{
+	border: 0;
 	background: $color_menu_obsbioetica;
 	padding: 0;
 	-webkit-transition: all 0.2s ease-in-out;                  
@@ -64,6 +65,7 @@ header.navbar[role=banner]{
 		 border-bottom: none;
 		 padding: 0;
 		 text-align: right;
+		 background: $color-font;
 		 
 		 // Logo
 		 section:nth-child(1){
@@ -167,13 +169,13 @@ header.navbar[role=banner]{
 								height: 1px;
 								width: 0%;
 								left: 0%;
-								background: $color-green-header-2;
+								background: $color_brown_light;
 								bottom: 15%;
 								visibility: hidden;
 							}
 							&:hover{
 								text-decoration: none;
-								color: $color-green-header-2;
+								color: $color_brown_light;
 								&:before{
 									visibility: visible;
 									width: 100%;

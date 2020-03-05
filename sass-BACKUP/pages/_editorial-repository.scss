@@ -1,0 +1,187 @@
+// ------------------- Editorial repository page  ------------------- //
+.block-views-blockeditorial-repositorio-block-1{
+	
+}
+
+
+section[class*="block-views-blockeditorial-repositorio-block-"]{
+	@include grid-child-column (1, 3);
+	
+	.view-editorial-repositorio.view-id-editorial_repositorio{
+		
+		.view-content{
+			padding: 3rem;
+		}
+		
+		.views-infinite-scroll-content-wrapper{
+			grid-gap: 3rem;
+			@include display-grid;
+			@include grid-parent-3-columns (1fr, 1fr, 1fr);
+			
+			@media only screen and (max-width: 991px){
+				@include grid-parent-2-columns (1fr, 1fr);
+			}
+			
+			@media only screen and (max-width: $tablet-2){
+				@include grid-parent-1-columns (1fr);
+			}
+			
+			&:before,
+			&:after{
+				display: none;
+			}
+			
+		}
+		
+	}
+	
+	.view-content{
+		padding: 3rem 0 3rem 3rem;
+		@media only screen and (max-width: $tablet-2){
+			text-align: center;
+		}
+		
+		// Each block of information
+		.views-row {
+			background: $bg-white;
+			padding: 0 0 3rem;
+			align-self: self-start;
+			@include display-grid;
+			@include grid-parent-2-columns (16rem, 1fr);
+			
+			&:nth-child(3){
+				margin-right: 0;
+			}
+			
+			@media only screen and (max-width: 991px){
+				padding: 0 0 3rem;
+				&:nth-child(even){
+					margin-right: 0;
+				}
+				&:nth-child(odd){
+					margin: 0 2rem 3rem 0;
+				}
+			}
+			@media only screen and (max-width: $tablet-2){
+				padding: 0 0 3rem;
+				text-align: initial;
+				&:nth-child(even){
+					margin: 0 auto 3rem;
+				}
+				&:nth-child(odd){
+					margin: 0 auto 3rem;
+				}
+				&:last-child{
+					margin-bottom: 0;
+				}
+			}
+			
+			// Image 
+			.views-field-field-imagen-del-editorial{
+				@include grid-child-column (1, 3);
+				@include grid-child-row (1, 2);
+				
+				.field-content{
+					a{
+						display: block;
+						overflow: hidden;
+						img{
+							@media only screen and (max-width: $tablet-2){
+								width: -webkit-fill-available;
+								width: -moz-fill-available;
+								width: -o-fill-available;
+								width: -ms-fill-available;
+							}
+						}
+					}
+				}
+			}
+			
+			// Author image
+			.views-field-field-imagen-del-autor{
+				padding: 0 0 0 2rem;
+				margin-top: -4rem;
+				margin-bottom: 2rem;
+				position: relative;
+				@include grid-child-column (1, 2);
+				@include grid-child-row (2, 3);
+				
+				.field-content{
+					border-radius: 50%;
+					z-index: 10;
+					position: relative;
+					overflow: hidden;
+					border: 3px solid $bg-white;
+					width: 120px;
+					height: 120px;
+					
+					img{
+						object-fit: cover;
+						max-width: initial;
+						width: 100%;
+					}
+					
+				}
+				
+			}
+			
+			// Author name
+			.views-field-field-autor{
+				margin-top: 2rem;
+				font: $font-txt-xl $font-AG-bold;
+				color: $color-aqua;
+				line-height: $font-txt-xl;
+				@include grid-child-column (2, 3);
+				@include grid-child-row (2, 3);
+				@media only screen and (max-width: 645px){
+					padding: 0 3rem;
+				}
+			}
+			
+			// Date
+			.views-field-field-fecha{
+				padding: 0 3rem;
+				clear: both;
+				font: $font-txt-s $font-AG-bold;
+				color: $color_gray_50;
+				@include grid-child-column (1, 3);
+				@include grid-child-row (3, 4);
+			}
+			
+			// Title
+			.views-field-title{
+				padding: 0 3rem;
+				font: $font-subtitles $font-AG-black;
+				@include grid-child-column (1, 3);
+				@include grid-child-row (4, 5);
+				
+				a{
+					display: block;
+					margin: 1rem 0;
+					font: $font-subtitles $font-AG-black;
+					line-height: $font-subtitles;
+					color: $color_text;
+				}
+				
+			}
+			
+			// Body txt
+			.views-field-body{
+				padding: 0 3rem;
+				@include grid-child-column (1, 3);
+				@include grid-child-row (5, 6);
+				.more-link a{
+					@include buttons-turq-line;
+				}
+			}
+			
+			// Bocadillo txt
+			.views-field-field-bocadillo{
+				padding: 0 3rem;
+				@include grid-child-column (1, 3);
+				@include grid-child-row (6, 7);
+			}
+			
+		}
+	}
+}

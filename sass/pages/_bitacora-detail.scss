@@ -30,11 +30,11 @@
 			
 			.panel-heading{
 				background: none;
-				border: 4px solid $color-aqua;
+				border: 4px solid $color_brown_light;
 				padding: 0;
 				position: relative;
 				&:hover{
-					background: $color-aqua;
+					background: $color_brown_light;
 					
 				}
 				
@@ -44,7 +44,7 @@
 					margin: 0;
 					text-transform: uppercase;
 					font: $font-txt-m $font-brandb;
-					color: $color-aqua;
+					color: $color_brown_light;
 					padding: 1rem 6rem 1rem 2rem;
 					display: block;
 					letter-spacing: 1.8px;
@@ -76,7 +76,7 @@
 				}
 				
 				a[aria-expanded="true"]{
-					background: $color-aqua;
+					background: $color_brown_light;
 					margin: 0;
 					text-transform: uppercase;
 					font: $font-txt-m $font-brandb;
@@ -115,7 +115,7 @@
 					font-size: $font-txt-l;
 					
 					span{
-						color: $color-aqua;
+						color: $color_brown_light;
 					}
 					
 				}

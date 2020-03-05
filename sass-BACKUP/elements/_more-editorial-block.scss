@@ -1,0 +1,95 @@
+// --------------------------- Next events block ----------------------------- //
+.region-content{
+	
+	section.contenedor-proximos-editoriales{
+		background: $color-pi;
+		padding: 4rem;
+		
+		// header info
+		.view-header{
+			border-bottom: 1px solid $color-font-brown;
+			margin: -4rem -4rem 3rem;
+			padding: 1.5rem 4rem;
+			p{
+				font: $font-titles $font-AG-black;
+				color: $color-font;
+			}
+		}
+		
+		
+		//section[class*="block-views-blockeditorial-repositorio-block-"] .view-editorial-repositorio.view-id-editorial_repositorio .view-content
+		
+		.view-editorial-repositorio.view-id-editorial_repositorio{
+			
+			// content info
+			.view-content{
+				padding: 0;
+				
+				.views-row{
+					margin-bottom: 2rem;
+					background: none;
+					
+					&:last-child{
+						margin-bottom: 0;
+					}
+					
+					// date event
+					.views-field-field-fecha{
+						padding: 0;
+						time{
+							color: $color-font;
+							font: $font-txt-xl $font-AG-regular;
+						}
+					}
+					
+					// title event
+					.views-field-title{
+						margin: 0 0 1rem;
+						padding: 0;
+						a{
+							color: $color-font;
+							font: $font-subtitles $font-AG-black;
+							line-height: $font-titles;
+							display: inline-block;
+							&:after{
+								background: $color-font-brown;
+							}
+						}
+					}
+					
+					// title bocadillo
+					.views-field-field-bocadillo{
+						padding: 0;
+					}
+					
+					// body and link event
+					.views-field-body{
+						padding: 0;
+						.more-link{
+							a{
+								@include buttons-brown;
+								&:before, &:after{
+									display: none;
+								}
+							}
+						}
+					}
+					
+				}
+			}
+			
+		}
+		
+		
+		// Link
+		.more-link.form-group{
+			a{
+				@include buttons-brown-fill;
+				&:before, &:after{
+					display: none;
+				}
+			}
+		}
+	}
+	
+}

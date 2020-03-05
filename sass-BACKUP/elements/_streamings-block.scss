@@ -1,0 +1,35 @@
+// --------------------------- Next events block ----------------------------- //
+.contenedor-evento-streaming{
+	background: $color-prox-events;
+	padding: 4rem;
+	
+	
+	// Title streaming
+	.field--name-field-nombre-del-streaming{
+		border-bottom: 1px solid $color-aqua;
+		margin: -4rem -4rem 3rem;
+		padding: 1.5rem 4rem;
+		color: $bg-white;
+		font: $font-titles $font-AG-black;
+	}
+	
+	// Fecha stream
+	.field--name-field-fecha-streaming{
+		padding: 1rem 0;
+		time{
+			font: $font-txt-xl $font-AG-regular;
+		}
+	}
+	
+	// Description stream
+	.field--name-field-descripcion-streaming{
+		padding: 0 0 1rem;
+	}
+	
+	// Link stream
+	.field--name-field-enlace-al-streaming{
+		a{
+			@include buttons-turq-line;
+		}
+	}
+}

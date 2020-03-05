@@ -132,6 +132,7 @@ p,
 .field--name-field-body li,
 .field--name-field-body2 li {
     @include interna-parrafo;
+    color: $color_text;
 
 	a {
 		color: $color-aqua;
@@ -164,6 +165,7 @@ li:last-child {
             @include interna-parrafo;
             //padding-left: 25px;
             @include bullet;
+            	color: $color_text;
         }
     }
 }

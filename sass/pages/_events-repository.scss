@@ -34,7 +34,7 @@
 				
 			    // Links
 			    a{
-				    @include buttons-turq-line;
+				    @include buttons-brown-line;
 				    margin-top: 0;
 				    padding: 1rem 3rem;
 				    @media only screen and (max-width: 991px){
@@ -54,7 +54,7 @@
 				
 				//links
 				a{
-					@include buttons-turq-fill;
+					@include buttons-brown-line;
 					margin-top: 0;
 				    padding: 1rem 3rem;
 				    @media only screen and (max-width: 991px){
@@ -95,7 +95,7 @@
 						 text-overflow: '';
 						 height: 4rem;
 						 -webkit-appearance: button;
-						 @include buttons-turq-line;
+						 @include buttons-brown-line;
 						  padding: 1rem 2rem 1rem 1rem;
 						 &::-ms-expand {
 						     display: none;
@@ -132,7 +132,7 @@
 				// Event image
 				.views-field-field-imagen-del-evento{
 					@include grid-child-column (1, 2);
-					@include grid-child-row (1,4);
+					@include grid-child-row (1,8);
 					
 					@media only screen and (max-width: $tablet-2){
 						margin-bottom: 1rem;
@@ -164,14 +164,24 @@
 				}
 				
 				// Event body txt
-				.views-field-body{
+				.views-field-field-bocadillo-evento{
 					@include grid-child-column (2, 3);
 					@include grid-child-row (3, 4);
 					
 					.more-link a{
-						@include buttons-turq-line;
+						@include buttons-brown-line;
 					}
 				}
+				
+				// event link
+				.views-field-view-node{
+					@include grid-child-column (2, 3);
+					@include grid-child-row (4, 5);
+					a{
+						@include buttons-brown-line;
+					}
+				}
+				
 			}
 		}
 	}

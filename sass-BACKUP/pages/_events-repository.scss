@@ -1,0 +1,178 @@
+// ------------------- Events repository page - blocktabs  ------------------- //
+.block-blocktabs{
+	border: 0px;
+	@include grid-child-column (1, 3);
+	
+	// content for blocktabs
+	.ui-widget-content{
+		border: 0px;
+		padding: 0;
+		
+		// Selector buttons
+		.ui-tabs-nav{
+			padding: 0 0 2rem;
+			background: $bg-body;
+		    border-radius: 0;
+		    border: 0px;
+			
+			// Regular
+			li{
+				-webkit-transition: all 0.2s ease-in-out;                  
+			    -moz-transition: all 0.2s ease-in-out;                 
+			    -o-transition: all 0.2s ease-in-out;   
+			    -ms-transition: all 0.2s ease-in-out;          
+			    transition: all 0.2s ease-in-out;
+				margin: 0 1rem 0 0;
+				border: 0px;
+				background: $bg-white;
+				@media only screen and (max-width: 991px){
+					display: block;
+					float: none;
+					margin: 0 1rem 1rem;
+					background: none;
+				}
+				
+			    // Links
+			    a{
+				    @include buttons-turq-line;
+				    margin-top: 0;
+				    padding: 1rem 3rem;
+				    @media only screen and (max-width: 991px){
+						float: none;
+					}
+			    }
+			}
+			
+			// Active
+			.ui-tabs-active{
+				border: 0px;
+				background: none;
+				@media only screen and (max-width: 991px){
+					display: block;
+					float: none;
+				}
+				
+				//links
+				a{
+					@include buttons-turq-fill;
+					margin-top: 0;
+				    padding: 1rem 3rem;
+				    @media only screen and (max-width: 991px){
+						float: none;
+					}
+				}
+			}
+		}
+		
+		// Inner content box
+		div[id*="blocktabs-eventos_repositorio_tabs-"]{
+			//padding: 4rem;
+			
+			// Results text
+			.view-header{
+				padding: 4rem 4rem 1rem;
+				font: $font-txt-l $font-AG-light;
+			}
+			
+			.view-filters.form-group{
+				.form--inline{
+					padding: 0 4rem;
+				}
+				.select-wrapper{
+					&:after{
+					    display: none;
+					}
+					
+					// Selector
+					select{
+						 @include latoregular(13px);
+						 @include estilo-base-input;
+						 color: $color_gray_60;
+						 width: 100%;
+						 //background: url('../images/ArrowGreenDown.svg') no-repeat 98% 50% white;
+						 appearance: none;
+						 text-indent: 1px;
+						 text-overflow: '';
+						 height: 4rem;
+						 -webkit-appearance: button;
+						 @include buttons-turq-line;
+						  padding: 1rem 2rem 1rem 1rem;
+						 &::-ms-expand {
+						     display: none;
+						 }
+					}
+				}
+			}
+			
+			// Each event in the repository
+			.views-row{
+				padding: 4rem;
+				display: table;
+				position: relative;
+				grid-row-gap: 0.5rem;
+				grid-column-gap: 2rem;
+				@include display-grid;
+				@include grid-parent-2-columns (1fr, 2fr);
+				
+				&:after{
+					position: absolute;
+					content: "";
+					height: 1px;
+					width: 45px;
+					background: $color-aqua;
+					bottom: 0px;
+					left: 0px;
+				}
+				&:last-child{
+					&:after{
+						visibility: hidden;
+					}
+				}
+				
+				// Event image
+				.views-field-field-imagen-del-evento{
+					@include grid-child-column (1, 2);
+					@include grid-child-row (1,4);
+					
+					@media only screen and (max-width: $tablet-2){
+						margin-bottom: 1rem;
+					}
+					
+				}
+				
+				// Event date
+				.views-field-field-fecha-del-evento{
+					@include grid-child-column (2, 3);
+					@include grid-child-row (1, 2);
+					
+					time{
+						font: $font-txt-l $font-AG-light;
+					}
+					
+				}
+				
+				// Event title
+				.views-field-title{
+					@include grid-child-column (2, 3);
+					@include grid-child-row (2, 3);
+					
+					a{
+						font: $font-subtitles $font-AG-black;
+						line-height: $font-subtitles;
+					}
+					
+				}
+				
+				// Event body txt
+				.views-field-body{
+					@include grid-child-column (2, 3);
+					@include grid-child-row (3, 4);
+					
+					.more-link a{
+						@include buttons-turq-line;
+					}
+				}
+			}
+		}
+	}
+}

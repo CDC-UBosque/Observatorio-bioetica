@@ -1,8 +1,9 @@
 @mixin buttons{
-	color: $bg-white;
+	color: $color_text;
 	font-family: $font-AG-regular;
 	font-size: $font-txt-xxl;
-	border: 2px solid;
+	background: $color-green-header-2;
+	border: 2px solid $color-green-header-2;
 	letter-spacing: 3px;
     position: relative;
     display: block;
@@ -38,10 +39,10 @@
 
 @mixin buttons-brown{
 	
-	color: $color-font-brown;
+	color: $color_menu_obsbioetica;
 	font-family: $font-AG-regular;
 	font-size: $font-txt-m;
-	border: 2px solid $color-font-brown;
+	border: 2px solid $color_menu_obsbioetica;
 	letter-spacing: 3px;
 	margin: 0rem auto 3rem;
     position: relative;
@@ -53,12 +54,12 @@
 		content: "";
 		height: 1px;
 		width: 50%;
-		left: -30%;
-		background: $color-font-brown;
+		left: -3rem;
+		background: transparentize($color_menu_obsbioetica, .7);
 		bottom: -70%;
 	}
 	&:hover{
-		background: $color-font-brown;
+		background: $color_menu_obsbioetica;
 		color: $bg-white;
 		&:after{
 			visibility: hidden;
@@ -86,12 +87,12 @@
 		height: 1px;
 		width: 50%;
 		left: -30%;
-		background: $color-font-brown;
+		background: $color_menu_obsbioetica;
 		bottom: -70%;
 	}
 	&:hover{
 		background: $bg-white;
-		color: $color-font-brown;
+		color: $color_menu_obsbioetica;
 		&:after{
 			visibility: hidden;
 		}
@@ -119,13 +120,13 @@
 	
 }
 
-@mixin buttons-white-fill{
+@mixin buttons-grey{
 	
-	color: $color-aqua;
-	background: $bg-white;
+	color: $color-green-header-2;
+	background: $color_menu_obsbioetica;
 	font-family: $font-AG-regular;
 	font-size: $font-txt-m;
-	border: 2px solid $bg-white;
+	border: 2px solid $color_menu_obsbioetica;
 	letter-spacing: 3px;
 	margin: 0rem auto;
     position: relative;
@@ -135,17 +136,38 @@
     display: inline-block;
 	&:hover{
 		background: none;
-		color: $bg-white;
+		color: $color_menu_obsbioetica;
+	}
+	
+}
+
+@mixin buttons-white-fill{
+	
+	color: $color-green-header-2;
+	background: $color-fde;
+	font-family: $font-AG-regular;
+	font-size: $font-txt-m;
+	border: 2px solid $color-fde;
+	letter-spacing: 3px;
+	margin: 0rem auto;
+    position: relative;
+    padding: 0.5rem 1rem;
+    border-radius: 0.4rem;
+    margin-top: 2rem;
+    display: inline-block;
+	&:hover{
+		background: none;
+		color: $color-fde;
 	}
 	
 }
 
 @mixin buttons-turq-line{
-	
-	color: $color-aqua;
+	color: $color-green-header-2;
+	background: $color-fde;
 	font-family: $font-AG-regular;
 	font-size: $font-txt-m;
-	border: 2px solid $color-aqua;
+	border: 2px solid $color-green-header-2;
 	letter-spacing: 3px;
 	margin: 0rem auto;
     position: relative;
@@ -154,7 +176,28 @@
     margin-top: 1rem;
     display: inline-block;
 	&:hover{
-		background: $color-aqua;
+		background: none;
+		color: $color-green-header-2;
+	}
+	
+}
+
+@mixin buttons-brown-line{
+	color: $color-fde;
+	background: $bg-white;
+	font-family: $font-AG-regular;
+	font-size: $font-txt-m;
+	border: 2px solid $color-fde;
+	letter-spacing: 3px;
+	margin: 0rem auto;
+    position: relative;
+    padding: 0.5rem 1rem;
+    border-radius: 0.4rem;
+    margin-top: 1rem;
+    display: inline-block;
+    transition: all .5s ease-in-out;
+	&:hover{
+		background: $color-fde;
 		color: $bg-white;
 	}
 	
@@ -554,11 +597,11 @@ $font_family_group: $family) {
 			// Normal state
 			.views-accordion-header{
 				background: none;
-				border: 4px solid $color-aqua;
+				border: 4px solid $color_brown_light;
 				padding: 1.5rem 6rem 1.5rem 2rem;
 				position: relative;
 				&:hover{
-					background: $color-aqua;
+					background: $color_brown_light;
 					&:after{
 						background-image: url(../images/svg/arrow-obs-down-hover.svg);
 					}
@@ -590,7 +633,7 @@ $font_family_group: $family) {
 					a{
 						text-transform: uppercase;
 						font: $font-txt-m $font-brandb;
-						color: $color-aqua;
+						color: $color_brown_light;
 						padding-right: 2rem;
 						display: block;
 						letter-spacing: 1.8px;
@@ -601,7 +644,7 @@ $font_family_group: $family) {
 			// Active
 			.views-accordion-header.ui-state-active{
 				border-bottom: 0px;
-				background: $color-aqua;
+				background: $color_brown_light;
 				&:after{
 					position: absolute;
 					content: "";
@@ -624,9 +667,9 @@ $font_family_group: $family) {
 			// Accordeon content active
 			.ui-accordion-content-active{
 				padding: 2rem;
-				border-left: 1px solid $color-aqua;
-				border-right: 1px solid $color-aqua;
-				border-bottom: 1px solid $color-aqua;
+				border-left: 1px solid transparentize(#CDCDC0, .4);
+				border-right: 1px solid transparentize(#CDCDC0, .4);
+				border-bottom: 1px solid transparentize(#CDCDC0, .4);
 				border-top: 0px;
 				height: auto;
 				padding-bottom: 2rem;
@@ -639,7 +682,7 @@ $font_family_group: $family) {
 				// Link
 				.more-link-bitacora{
 					a{
-						@include buttons-turq-line;
+						@include buttons-grey;
 					}
 				}
 			}

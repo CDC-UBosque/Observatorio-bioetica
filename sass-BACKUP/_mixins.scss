@@ -1,0 +1,649 @@
+@mixin buttons{
+	color: $bg-white;
+	font-family: $font-AG-regular;
+	font-size: $font-txt-xxl;
+	border: 2px solid;
+	letter-spacing: 3px;
+    position: relative;
+    display: block;
+    padding: 1rem;
+    text-align: center;
+	&:before{
+		 position: absolute;
+		 content: "";
+		 height: 2px;
+		 width: 6rem;
+		 left: -4rem;
+		 background: $bg-white;
+		 top: -4rem;
+	}
+	&:after{
+		position: absolute;
+		content: "";
+		height: 3px;
+		width: 80%;
+		left: 10%;
+		background: $bg-white;
+		bottom: 0%;
+		visibility: hidden;
+	}
+	&:hover{
+		&:after{
+			visibility: visible;
+			width: 80%;
+			bottom: 12%;
+		}
+	}
+}
+
+@mixin buttons-brown{
+	
+	color: $color-font-brown;
+	font-family: $font-AG-regular;
+	font-size: $font-txt-m;
+	border: 2px solid $color-font-brown;
+	letter-spacing: 3px;
+	margin: 0rem auto 3rem;
+    position: relative;
+    padding: 0.7rem 1rem;
+    border-radius: 0.3rem;
+    display: inline-block;
+	&:before{
+		position: absolute;
+		content: "";
+		height: 1px;
+		width: 50%;
+		left: -30%;
+		background: $color-font-brown;
+		bottom: -70%;
+	}
+	&:hover{
+		background: $color-font-brown;
+		color: $bg-white;
+		&:after{
+			visibility: hidden;
+		}
+	}
+	
+}
+
+@mixin buttons-brown-fill{
+	
+	color: $bg-white;
+	font-family: $font-AG-regular;
+	font-size: $font-txt-m;
+	background: $color-font-brown;
+	border: 2px solid $color-font-brown;
+	letter-spacing: 3px;
+	margin: 0rem auto 3rem;
+    position: relative;
+    padding: 0.7rem 1rem;
+    border-radius: 0.3rem;
+    display: inline-block;
+	&:before{
+		position: absolute;
+		content: "";
+		height: 1px;
+		width: 50%;
+		left: -30%;
+		background: $color-font-brown;
+		bottom: -70%;
+	}
+	&:hover{
+		background: $bg-white;
+		color: $color-font-brown;
+		&:after{
+			visibility: hidden;
+		}
+	}
+	
+}
+
+@mixin buttons-white-line{
+	
+	color: $bg-white;
+	font-family: $font-AG-regular;
+	font-size: $font-txt-m;
+	border: 2px solid $bg-white;
+	letter-spacing: 3px;
+	margin: 0rem auto;
+    position: relative;
+    padding: 0.5rem 1rem;
+    border-radius: 0.4rem;
+    margin-top: 1rem;
+    display: inline-block;
+	&:hover{
+		background: $bg-white;
+		color: $color-font;
+	}
+	
+}
+
+@mixin buttons-white-fill{
+	
+	color: $color-aqua;
+	background: $bg-white;
+	font-family: $font-AG-regular;
+	font-size: $font-txt-m;
+	border: 2px solid $bg-white;
+	letter-spacing: 3px;
+	margin: 0rem auto;
+    position: relative;
+    padding: 0.5rem 1rem;
+    border-radius: 0.4rem;
+    margin-top: 2rem;
+    display: inline-block;
+	&:hover{
+		background: none;
+		color: $bg-white;
+	}
+	
+}
+
+@mixin buttons-turq-line{
+	
+	color: $color-aqua;
+	font-family: $font-AG-regular;
+	font-size: $font-txt-m;
+	border: 2px solid $color-aqua;
+	letter-spacing: 3px;
+	margin: 0rem auto;
+    position: relative;
+    padding: 0.5rem 1rem;
+    border-radius: 0.4rem;
+    margin-top: 1rem;
+    display: inline-block;
+	&:hover{
+		background: $color-aqua;
+		color: $bg-white;
+	}
+	
+}
+
+@mixin buttons-turq-fill{
+	
+	color: $bg-white;
+	font-family: $font-AG-regular;
+	font-size: $font-txt-m;
+	border: 2px solid $color-aqua;
+	background: $color-aqua;
+	letter-spacing: 3px;
+	margin: 0rem auto;
+    position: relative;
+    padding: 0.5rem 1rem;
+    border-radius: 0.4rem;
+    margin-top: 1rem;
+    display: inline-block;
+	&:hover{
+		background: $bg-white;
+		color: $color-aqua;
+	}
+	
+}
+
+@mixin links-hover{
+	&:after{
+		position: absolute;
+		content: "";
+		height: 1px;
+		width: 0%;
+		left: 0%;
+		background: $color-aqua;
+		bottom: 0%;
+		visibility: hidden;
+	}
+	&:hover{
+		text-decoration: none;
+		color: $color-aqua;
+		&:after{
+			visibility: visible;
+			width: 100%;
+			bottom: 0%;
+		}
+	}
+}
+
+@mixin accordions{
+	
+				//button
+				.card{
+					background: none;
+					border: 1px solid $color-aqua;
+					margin-bottom: 1rem;
+					
+					//header
+					.card-header{
+						background: none;
+						border-bottom: none;
+						
+						h5{
+							line-height: 19px;
+						}
+						
+						.btn-link{
+							color: $color-aqua;
+							padding-left: 0;
+							position: relative;
+							width: 100%;
+							text-align: left;
+							display: contents;
+							&:after{
+								position: absolute; 
+								content: "\f062";
+								font-family: "Font Awesome 5 Free";
+								font-weight: 900;
+								color: $color-aqua;
+								right: 4%;
+								top: 1rem
+							}
+						
+						.btn-link.collapsed{
+							position: relative;
+							&:after{
+								position: absolute;
+								content: "\f063";
+								font-family: "Font Awesome 5 Free";
+								font-weight: 900;
+								color: $color-aqua;
+								right: 4%;
+								top: 1rem;
+							}
+						}
+					}
+					
+					.collapse, .collapsing{
+						//border-top: 1px solid $color-aqua;
+						.card-body{
+							padding-top: 0;
+							font-family: $font-AG-light;
+							font-size: $font-txt-l;
+							
+							
+						}
+					}
+				}
+			}
+		
+}
+
+@mixin grid-event-repository{
+	@include inline-block(top);
+	@include grid-porcentaje(6);
+	float: left;
+	@media only screen and (max-width: $tablet-2){
+		@include grid-porcentaje(12);
+	}
+}
+
+// ------------------------ Microsoft edge & IE fixes --------------------------- //
+// --------------------------------------------------- //
+@mixin resets-edge-ie ($css-rule, $css-property){
+	// ---
+	// --- support microsoft edge ---
+	@supports (-ms-ime-align: auto) {
+		#{$css-rule}: $css-property;							
+	}
+	
+	// ---
+	// --- support internet explorer ---
+	@media all and (-ms-high-contrast: none), (-ms-high-contrast: active){
+		#{$css-rule}: $css-property;		
+	}
+}
+
+// ------------------------ Display grid cross browser settings --------------------------- //
+// --------------------------------------------------- //
+// display grid parent
+@mixin display-grid{
+	
+	@supports (display: grid) {
+		display: grid;
+	}
+	
+	@supports (-ms-ime-align: auto) {
+		display: grid;							
+	}
+	
+	@supports not (display: grid){
+		display: inline-block;
+	}
+	
+	@media all and (-ms-high-contrast: none), (-ms-high-contrast: active){
+		display: -ms-grid;		
+	}
+	
+}
+
+// display flex parent
+@mixin display-flex{
+	
+	@supports (display: flex) {
+		display: flex;
+	}
+	
+	@supports (-ms-ime-align: auto) {
+		display: flex;							
+	}
+	
+	@supports not (display: flex){
+		display: inline-block;
+		width: 100%;
+	}
+	
+	@media all and (-ms-high-contrast: none), (-ms-high-contrast: active){
+		display: -ms-grid;	
+		width: 100%;	
+	}
+	
+}
+
+// ------------------------ cross browsers mixins --------------------------- //
+// --------------------------------------------------- //
+
+/// Mixin to prefix a property
+/// @author Hugo Giraudel
+/// @param {String} $property - Property name
+/// @param {*} $value - Property value
+/// @param {List} $prefixes (()) - List of prefixes to print
+@mixin prefix($property, $value, $prefixes: ()) {
+  @each $prefix in $prefixes {
+    #{'-' + $prefix + '-' + $property}: $value;
+  }
+ 
+  // Output standard non-prefixed declaration
+  #{$property}: $value;
+}
+
+// usage
+//@include prefix(border-radius, 0px, webkit moz);
+
+// ------------------------ Display grid columns parent cross browser settings --------------------------- //
+// --------------------------------------------------- //
+// display grid child parents
+@mixin grid-parent-1-columns ($x1) {
+	  grid-template-columns: $x1;
+  -ms-grid-columns: $x1;
+}
+
+@mixin grid-parent-2-columns ($x1, $x2) {
+	  grid-template-columns: $x1 $x2;
+  -ms-grid-columns: $x1 $x2;
+}
+
+@mixin grid-parent-3-columns ($x1, $x2, $x3) {
+	  grid-template-columns: $x1 $x2 $x3;
+  -ms-grid-columns: $x1 $x2 $x3;
+}
+
+@mixin grid-parent-4-columns ($x1, $x2, $x3, $x4) {
+	  grid-template-columns: $x1 $x2 $x3 $x4;
+  -ms-grid-columns: $x1 $x2 $x3 $x4;
+}
+
+@mixin grid-parent-5-columns ($x1, $x2, $x3, $x4, $x5) {
+	  grid-template-columns: $x1 $x2 $x3 $x4 $x5;
+  -ms-grid-columns: $x1 $x2 $x3 $x4 $x5;
+}
+
+@mixin grid-parent-6-columns ($x1, $x2, $x3, $x4, $x5, $x6) {
+	  grid-template-columns: $x1 $x2 $x3 $x4 $x5 $x6;
+  -ms-grid-columns: $x1 $x2 $x3 $x4 $x5 $x6;
+}
+
+@mixin grid-parent-7-columns ($x1, $x2, $x3, $x4, $x5, $x6, $x7) {
+	  grid-template-columns: $x1 $x2 $x3 $x4 $x5 $x6 $x7;
+  -ms-grid-columns: $x1 $x2 $x3 $x4 $x5 $x6 $x7;
+}
+
+@mixin grid-parent-8-columns ($x1, $x2, $x3, $x4, $x5, $x6, $x7, $x8) {
+	  grid-template-columns: $x1 $x2 $x3 $x4 $x5 $x6 $x7 $x8;
+  -ms-grid-columns: $x1 $x2 $x3 $x4 $x5 $x6 $x7 $x8;
+}
+
+@mixin grid-parent-9-columns ($x1, $x2, $x3, $x4, $x5, $x6, $x7, $x8, $x9) {
+	  grid-template-columns: $x1 $x2 $x3 $x4 $x5 $x6 $x7 $x8 $x9;
+  -ms-grid-columns: $x1 $x2 $x3 $x4 $x5 $x6 $x7 $x8 $x9;
+}
+
+@mixin grid-parent-10-columns ($x1, $x2, $x3, $x4, $x5, $x6, $x7, $x8, $x9, $x10) {
+	  grid-template-columns: $x1 $x2 $x3 $x4 $x5 $x6 $x7 $x8 $x9 $x10;
+  -ms-grid-columns: $x1 $x2 $x3 $x4 $x5 $x6 $x7 $x8 $x9 $x10;
+}
+
+@mixin grid-parent-11-columns ($x1, $x2, $x3, $x4, $x5, $x6, $x7, $x8, $x9, $x10, $x11) {
+	  grid-template-columns: $x1 $x2 $x3 $x4 $x5 $x6 $x7 $x8 $x9 $x10 $x11;
+  -ms-grid-columns: $x1 $x2 $x3 $x4 $x5 $x6 $x7 $x8 $x9 $x10 $x11;
+}
+
+@mixin grid-parent-12-columns ($x1, $x2, $x3, $x4, $x5, $x6, $x7, $x8, $x9, $x10, $x11, $x12) {
+	  grid-template-columns: $x1 $x2 $x3 $x4 $x5 $x6 $x7 $x8 $x9 $x10 $x11 $x12;
+  -ms-grid-columns: $x1 $x2 $x3 $x4 $x5 $x6 $x7 $x8 $x9 $x10 $x11 $x12;
+}
+
+// ------------------------ Display grid rows parent cross browser settings --------------------------- //
+// --------------------------------------------------- //
+// display grid child parents
+@mixin grid-parent-1-rows ($x1) {
+	grid-template-rows: $x1;
+  -ms-grid-rows: $x1;
+}
+
+@mixin grid-parent-2-rows ($x1, $x2) {
+	  grid-template-rows: $x1 $x2;
+  -ms-grid-rows: $x1 $x2;
+}
+
+@mixin grid-parent-3-rows ($x1, $x2, $x3) {
+	  grid-template-rows: $x1 $x2 $x3;
+  -ms-grid-rows: $x1 $x2 $x3;
+}
+
+@mixin grid-parent-4-rows ($x1, $x2, $x3, $x4) {
+	  grid-template-rows: $x1 $x2 $x3 $x4;
+  -ms-grid-rows: $x1 $x2 $x3 $x4;
+}
+
+@mixin grid-parent-5-rows ($x1, $x2, $x3, $x4, $x5) {
+	  grid-template-rows: $x1 $x2 $x3 $x4 $x5;
+  -ms-grid-rows: $x1 $x2 $x3 $x4 $x5;
+}
+
+@mixin grid-parent-6-rows ($x1, $x2, $x3, $x4, $x5, $x6) {
+	  grid-template-rows: $x1 $x2 $x3 $x4 $x5 $x6;
+  -ms-grid-rows: $x1 $x2 $x3 $x4 $x5 $x6;
+}
+
+@mixin grid-parent-7-rows ($x1, $x2, $x3, $x4, $x5, $x6, $x7) {
+	  grid-template-rows: $x1 $x2 $x3 $x4 $x5 $x6 $x7;
+  -ms-grid-rows: $x1 $x2 $x3 $x4 $x5 $x6 $x7;
+}
+
+@mixin grid-parent-8-rows ($x1, $x2, $x3, $x4, $x5, $x6, $x7, $x8) {
+	  grid-template-rows: $x1 $x2 $x3 $x4 $x5 $x6 $x7 $x8;
+  -ms-grid-rows: $x1 $x2 $x3 $x4 $x5 $x6 $x7 $x8;
+}
+
+@mixin grid-parent-9-rows ($x1, $x2, $x3, $x4, $x5, $x6, $x7, $x8, $x9) {
+	  grid-template-rows: $x1 $x2 $x3 $x4 $x5 $x6 $x7 $x8 $x9;
+  -ms-grid-rows: $x1 $x2 $x3 $x4 $x5 $x6 $x7 $x8 $x9;
+}
+
+@mixin grid-parent-10-rows ($x1, $x2, $x3, $x4, $x5, $x6, $x7, $x8, $x9, $x10) {
+	  grid-template-rows: $x1 $x2 $x3 $x4 $x5 $x6 $x7 $x8 $x9 $x10;
+  -ms-grid-rows: $x1 $x2 $x3 $x4 $x5 $x6 $x7 $x8 $x9 $x10;
+}
+
+@mixin grid-parent-11-rows ($x1, $x2, $x3, $x4, $x5, $x6, $x7, $x8, $x9, $x10, $x11) {
+	  grid-template-rows: $x1 $x2 $x3 $x4 $x5 $x6 $x7 $x8 $x9 $x10 $x11;
+  -ms-grid-rows: $x1 $x2 $x3 $x4 $x5 $x6 $x7 $x8 $x9 $x10 $x11;
+}
+
+@mixin grid-parent-12-rows ($x1, $x2, $x3, $x4, $x5, $x6, $x7, $x8, $x9, $x10, $x11, $x12) {
+	  grid-template-rows: $x1 $x2 $x3 $x4 $x5 $x6 $x7 $x8 $x9 $x10 $x11 $x12;
+  -ms-grid-rows: $x1 $x2 $x3 $x4 $x5 $x6 $x7 $x8 $x9 $x10 $x11 $x12;
+}
+
+// display grid child columns
+@mixin grid-child-column ($col-start, $col-end) {
+	  grid-column: #{$col-start}/#{$col-end};
+  -ms-grid-column: $col-start;
+  -ms-grid-column-span: $col-end - $col-start;
+}
+
+// display grid child rows
+@mixin grid-child-row ($row-start, $row-end) {
+	  grid-row: #{$row-start}/#{$row-end};
+  -ms-grid-row: $row-start;
+  -ms-grid-row-span: $row-end - $row-start;
+}
+
+@mixin reset-grid-childs{
+	grid-column: initial;
+    -ms-grid-column: initial;
+    -ms-grid-column-span: initial;
+    grid-row: initial;
+    -ms-grid-row: initial;
+    -ms-grid-row-span: initial;
+}
+
+/* title program-card font style */
+//$font_family: 'Acherus_Grotesque',sans-serif;
+
+@mixin font_universal ($font_family_line_height: $line_height,
+$font_family_weight: $weight,
+$font_family_size: $size,
+$font_family_color: $color,
+$font_family_letter_spacing: $spacing,
+$font_family_group: $family) {
+  font-size: $font_family_size;
+  line-height: $font_family_line_height;
+  font-weight: $font_family_weight;
+  font-family: $font_family_group;
+  color: $font_family_color;
+  letter-spacing: $font_family_letter_spacing;
+}
+
+@mixin bg-laterales($color, $width: $bg-demasia-width) {
+    position: relative;
+    &::before,
+    &::after {
+        content: "";
+        background-color: $color;
+        width: $width;
+        height: 100%;
+        position: absolute;
+        top: 0px;
+    }
+    &::before {
+        left: 100%;
+    }
+    &::after {
+        right: 100%;
+    }
+}
+
+@mixin accordion{
+	.views-row{
+				
+		.views-row{
+			margin-bottom: 1rem;
+			&:last-child{
+				margin-bottom: 0;
+			}
+			
+			// Normal state
+			.views-accordion-header{
+				background: none;
+				border: 4px solid $color-aqua;
+				padding: 1.5rem 6rem 1.5rem 2rem;
+				position: relative;
+				&:hover{
+					background: $color-aqua;
+					&:after{
+						background-image: url(../images/svg/arrow-obs-down-hover.svg);
+					}
+					
+					.field-content{
+						a{
+							color: $bg-white;
+						}
+					}
+				}
+				
+				&:after{
+					position: absolute;
+					content: "";
+					background-image: url(../images/svg/arrow-obs-down.svg);
+					width: 20px;
+					right: 4%;
+					top: 1rem;
+					height: 20px;
+					background-size: contain;
+					background-repeat: no-repeat;
+				}
+				
+				.ui-icon{
+					display: none;
+				}
+				
+				.field-content{
+					a{
+						text-transform: uppercase;
+						font: $font-txt-m $font-brandb;
+						color: $color-aqua;
+						padding-right: 2rem;
+						display: block;
+						letter-spacing: 1.8px;
+					}
+				}
+			}
+			
+			// Active
+			.views-accordion-header.ui-state-active{
+				border-bottom: 0px;
+				background: $color-aqua;
+				&:after{
+					position: absolute;
+					content: "";
+					background-image: url(../images/svg/arrow-obs-up-hover.svg);
+					width: 20px;
+					right: 4%;
+					top: 1rem;
+					height: 20px;
+					background-size: contain;
+					background-repeat: no-repeat;
+				}
+				
+				.field-content{
+					a{
+						color: $bg-white;
+					}
+				}
+			}
+			
+			// Accordeon content active
+			.ui-accordion-content-active{
+				padding: 2rem;
+				border-left: 1px solid $color-aqua;
+				border-right: 1px solid $color-aqua;
+				border-bottom: 1px solid $color-aqua;
+				border-top: 0px;
+				height: auto;
+				padding-bottom: 2rem;
+				
+				// TXT
+				.field-content{
+					font: $font-txt-l $font-AG-light;
+				}
+				
+				// Link
+				.more-link-bitacora{
+					a{
+						@include buttons-turq-line;
+					}
+				}
+			}
+		}
+	}
+	
+}

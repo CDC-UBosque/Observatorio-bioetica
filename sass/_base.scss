@@ -1,5 +1,5 @@
 body{
-	background: $bg-body;
+	background: transparentize(#CDCDC0, .9);;
 	color: $color-font;
 	font-family: $font-AG-light;
 	font-size: $font-txt-l;
@@ -34,14 +34,12 @@ a{
 }
 
 h1{
-	color: $color-aqua;
 	font-family: $font-AG-regular;
 	font-size: $font-titles-xl;
 	line-height: $font-titles-xl;
 }
 
 h2{
-	color: $color-aqua;
 	font-family: $font-AG-black;
 	font-size: $font-titles;
 }

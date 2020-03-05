@@ -1,0 +1,95 @@
+// --------------------------- Next events block ----------------------------- //
+.contenedor-proximos-eventos, section[class*="block-views-blockeventos-block-"]{
+	padding: 4rem;
+	margin-bottom: 4rem;
+	top: -8rem;
+	background: $color-prox-events;
+	@include grid-child-column (2,3);
+	@include grid-child-row (1, 8);
+	
+	@media only screen and (max-width: $tablet){
+		top: initial;
+		@include reset-grid-childs;
+	}
+	
+	// header info
+	.view-header{
+		border-bottom: 1px solid $color-aqua;
+		margin: -4rem -4rem 3rem;
+		padding: 1.5rem 4rem;
+		p{
+			color: $bg-white;
+			font: $font-titles $font-AG-black;
+		}
+	}
+	
+	// content info
+	.view-content{
+		
+		.views-row{
+			margin-bottom: 2rem;
+			&:last-child{
+				margin-bottom: 0;
+			}
+			
+			// Image
+			.views-field-field-imagen-del-evento{
+				margin-bottom: 1rem;
+			}
+			
+			// date event
+			.views-field-field-fecha-del-evento{
+				
+			}
+			
+			// title event
+			.views-field-title{
+				margin: 1rem 0;
+				a{
+					color: $color-font;
+					font: $font-subtitles $font-AG-black;
+					line-height: $font-titles;
+					display: inline-block;
+				}
+			}
+			
+			// body and link event
+			.views-field-body{
+				.more-link{
+					a{
+						@include buttons-turq-line;
+					}
+				}
+			}
+			
+		}
+	}
+	
+	.view-footer{
+		padding: 1.5rem 3rem;
+		a{
+			@include buttons-turq-line;
+			&:before{
+				position: absolute;
+				content: "";
+				height: 1px;
+				width: 50%;
+				left: -3rem;
+				background: $color-aqua;
+				top: -2rem;
+			}
+		}
+	}
+	
+	// Link more
+	.more-link.form-group{
+	    a{
+	     @include buttons-white-fill;
+	     &:hover{
+			&:after{
+				visibility: hidden;
+			}
+		}
+	    }
+	}
+}

@@ -8,7 +8,7 @@ $tablet-medida: 788; //tamaño para calculo
 $desktop-small: 980px;
 $desktop-medida: 1180; // tamaño descontando padding para calculo
 
-$color_text: #494C4D;
+$color_text: #758186;
 
 $color_brand:  #7BC142;
 $color_brand_dark: #2B3427;
@@ -31,31 +31,32 @@ $color_in: #0077b4;
 $color_googleplus: #DA4D40;
 
 // ----------------------- Observatorio global colors ----------------------- //
-$color_menu_obsbioetica:#BECF00; // menu
-$color-green-header-2:#567231;  // menu links
-$color-prox-events:#86D4C8; // proximos eventos
-$color-font:#272824; // font color
+$color_menu_obsbioetica:#758186; // menu
+$color-green-header-2:#E8E7E3;  // menu links
+$color-prox-events:#E8E7E3; // proximos eventos
+$color-font:#758186; // font color
 $color-font-brown:#A7A790; // font color brown for buttons
-$bg-body:#F4F7F9; // body background 
+$bg-body:transparentize(#CDCDC0, .9); // body background 
 $bg-white:#FFFFFF; // white
-$color-aqua:#21A3A3; // titles and links
+$color-aqua:#B38867; // titles and links
 $color-grey:#9B9B9B; // dates
+$color_brown_light: #DDBC95;
 
 
 // ----------------------- puede interesarle ----------------------- //
-$color-pi:#DEDEC0;
+$color-pi:#d7d7cc;
 
 // ----------------------- bioetica y salud ----------------------- //
-$color-bys:#D4B286;
+$color-bys:#758186;
 
 // ----------------------- bioetica y ambiente ----------------------- //
-$color-bya:#7CC4D4;
+$color-bya:#7F766E;
 
 // ----------------------- bioetica y educacion ----------------------- //
-$color-bye:#B2D486;
+$color-bye:#997F6B;
 
 // ----------------------- fundamentos de bioetica ----------------------- //
-$color-fde:#D47C7C;
+$color-fde:#B38867;
 
 // ------------------------------------------------------
 // ----------------------- Fonts ----------------------- //

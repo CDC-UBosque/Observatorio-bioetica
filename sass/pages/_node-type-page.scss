@@ -27,6 +27,7 @@
 			padding: 4rem;
 			width: 100%;
 			align-self: self-start;
+			top: initial;
 			@include grid-child-column (2, 3);
 			@include grid-child-row (1, 2);
 			

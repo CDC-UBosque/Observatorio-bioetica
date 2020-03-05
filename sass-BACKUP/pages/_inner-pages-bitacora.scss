@@ -1,0 +1,92 @@
+// ------------------- Content split by next events block  ------------------- //
+.region-content{
+	padding-bottom: 1rem;
+	background: $color_brand_white;
+	
+	.field--name-node-title{
+		padding: 1rem 3rem;
+	}
+	
+	.field.field--name-body.field--type-text-with-summary.field--label-hidden.field--item{
+		padding: 1rem 3rem;
+	}
+	
+	// Section left content
+	.node--type-bitacora{
+		
+		// Title
+		.field--name-node-title{
+			h2{
+				margin: 3rem;
+				color: $color-aqua;
+				font-family: $font-AG-black;
+				font-size: $font-titles-xl;
+				line-height: $font-titles-xl;
+			}
+		}
+		
+		// Content
+		.contenedor-bitacora-pagina{
+			padding: 0;
+			
+			// Image
+			.field--name-field-imagen-del-editorial{
+				    margin: 0 -4rem;
+			}
+			
+			// Author image
+			.field--name-field-imagen-del-autor{
+				@include inline-block(top);
+				float: left;
+				margin-top: -3rem;
+				margin-bottom: 2rem;
+				position: relative;
+				border-radius: 50%;
+				overflow: hidden;
+				border: 3px solid $bg-white;
+				z-index: 10;
+				width: 65px;
+				height: 65px;
+			}
+			
+			// Author name
+			.field--name-field-autor{
+				@include inline-block(top);
+				float: left;
+				font: $font-txt-xl $font-AG-bold;
+				color: $color-aqua;
+				@media only screen and (max-width: 645px){
+					padding: 1rem;
+				}
+			}
+			
+			// Dates
+			.field--name-field-fecha{
+				padding: 1rem;
+				clear: both;
+				font: $font-txt-s $font-AG-bold;
+			}
+			
+			// Body txt
+			.field--name-body{
+				padding: 1rem 1rem 3rem;
+				margin-bottom: 3rem;
+				position: relative;
+				&:after{
+					position: absolute;
+					content: "";
+					height: 1px;
+					width: 45px;
+					background: $color-aqua;
+					bottom: 0px;
+					left: -4rem;
+				}
+
+					.more-link a{
+						@include buttons-turq-line;
+					}
+			}
+		}
+	}
+	
+}

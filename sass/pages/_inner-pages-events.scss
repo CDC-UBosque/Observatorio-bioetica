@@ -60,7 +60,8 @@
 			// Title
 			.field--name-node-title{
 				//padding-bottom: calc( (1 / 1 * (150% + 0rem) ) - 165rem);
-				@include grid-child-column (1,2);
+				text-align: center;
+				@include grid-child-column (1,3);
 				@include grid-child-row (1, 2);
 				
 				@media only screen and (max-width: 798px){
@@ -79,11 +80,17 @@
 			
 			// Image
 			.field--name-field-imagen-del-evento{
+				justify-self: center;
 				@include grid-child-column (1,3);
 				@include grid-child-row (2, 3);
 				
 				@media only screen and (max-width: 798px){
 					@include reset-grid-childs
+				}
+				
+				img{
+					max-width: 60rem;
+					width: 100%;
 				}
 				
 			}

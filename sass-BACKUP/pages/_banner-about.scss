@@ -1,0 +1,17 @@
+// ------------------- Inner banner for about us page  ------------------- //
+.block-content--type-bloque-cabezote-imagen-titulo{
+	
+	// Title
+	.field--name-field-titulo-en-bloque{
+		color: $color-aqua;
+		font: $font-titles-xl $font-AG-black;
+		margin-bottom: 1rem;
+	}
+	
+	// Image
+	.field--name-field-imagen-cabezote{
+		img{
+			width: 100%;
+		}
+	}
+}

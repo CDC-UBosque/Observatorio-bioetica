@@ -1,0 +1,131 @@
+// ------------------- Content split by next events block  ------------------- //
+.page-node-type-editorial{
+	
+	.region-content{
+		@include display-grid;
+		@include grid-parent-2-columns (2fr, 1fr);
+	
+		@media only screen and (max-width: 798px){
+			@include grid-parent-1-columns (1fr);
+		}
+		
+		// Section left content
+		.node--type-editorial{
+			padding: 4rem;
+			@include grid-child-column (1, 2);
+			
+			@media only screen and (max-width: 798px){
+				@include reset-grid-childs;
+			}
+			
+			// Title
+			.field--name-node-title{
+				h2{
+					margin: 0 0 3rem;
+					color: $color-aqua;
+					font-family: $font-AG-black;
+					font-size: $font-titles-xl;
+					line-height: $font-titles-xl;
+				}
+			}
+			
+			// Content
+			.contenedor-editorial-pagina{
+				padding: 0;
+				@include display-grid;
+				@include grid-parent-2-columns (16rem, 1fr);
+				
+				// Image
+				.field--name-field-imagen-del-editorial{
+					    margin: 0 -4rem;
+					    @include grid-child-column (1, 3);
+						@include grid-child-row (1, 2);
+				}
+				
+				// Author image
+				.field--name-field-imagen-del-autor{
+					border-radius: 50%;
+					z-index: 10;
+					position: relative;
+					overflow: hidden;
+					border: 3px solid $bg-white;
+					width: 120px;
+					height: 120px;
+					margin-top: -4rem;
+					margin-bottom: 2rem;
+					position: relative;
+					@include grid-child-column (1, 2);
+					@include grid-child-row (2, 3);
+					
+					img{
+						object-fit: cover;
+						max-width: initial;
+						width: 100%;
+					}
+					
+				}
+				
+				// Author name
+				.field--name-field-autor{
+					font: $font-txt-xxl $font-AG-bold;
+					color: $color-aqua;
+					margin-top: 2rem;
+					@include grid-child-column (2, 3);
+					@include grid-child-row (2, 3);
+					@media only screen and (max-width: 645px){
+						padding: 0 3rem;
+					}
+				}
+				
+				// Dates
+				.field--name-field-fecha{
+					padding: 1rem;
+					clear: both;
+					font: $font-txt-s $font-AG-bold;
+					@include grid-child-column (1, 3);
+					@include grid-child-row (3, 4);
+				}
+				
+				// Body txt
+				.field--name-body{
+					padding: 1rem 1rem 3rem;
+					margin-bottom: 3rem;
+					position: relative;
+					@include grid-child-column (1, 3);
+					@include grid-child-row (4, 5);
+					&:after{
+						position: absolute;
+						content: "";
+						height: 1px;
+						width: 45px;
+						background: $color-aqua;
+						bottom: 0px;
+						left: -4rem;
+					}
+	
+						.more-link a{
+							@include buttons-turq-line;
+						}
+				}
+				
+			}
+			
+		}
+		
+		// block next editoriales
+		.contenedor-proximos-editoriales{
+			padding: 4rem;
+			align-self: self-start;
+			@include grid-child-column (2, 3);
+			
+			@media only screen and (max-width: 798px){
+				@include reset-grid-childs;
+			}
+		
+		}
+		
+	}
+
+}
+
+

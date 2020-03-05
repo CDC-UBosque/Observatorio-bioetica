@@ -2,15 +2,22 @@
 .contenedor-proximos-eventos, section[class*="block-views-blockeventos-block-"]{
 	padding: 4rem;
 	margin-bottom: 4rem;
+	top: -8rem;
 	background: $color-prox-events;
+	@include grid-child-column (2,3);
+	@include grid-child-row (1, 8);
 	
-	// header info
+	@media only screen and (max-width: $tablet){
+		top: initial;
+		@include reset-grid-childs;
+	}
+	
+	// header infoL
 	.view-header{
-		border-bottom: 1px solid $color-aqua;
+		border-bottom: 1px solid transparentize($color_menu_obsbioetica, .7);
 		margin: -4rem -4rem 3rem;
 		padding: 1.5rem 4rem;
 		p{
-			color: $bg-white;
 			font: $font-titles $font-AG-black;
 		}
 	}
@@ -22,6 +29,16 @@
 			margin-bottom: 2rem;
 			&:last-child{
 				margin-bottom: 0;
+				
+				.views-field-view-node{
+					a{
+						margin-bottom: 0;
+						&:before{
+							display: none;
+						}
+					}	
+				}
+				
 			}
 			
 			// Image
@@ -42,6 +59,13 @@
 					font: $font-subtitles $font-AG-black;
 					line-height: $font-titles;
 					display: inline-block;
+				}
+			}
+			
+			.views-field-view-node{
+				margin-top: 2rem;
+				a{
+					@include buttons-brown;
 				}
 			}
 			
@@ -67,7 +91,7 @@
 				height: 1px;
 				width: 50%;
 				left: -3rem;
-				background: $color-aqua;
+				background: transparentize($color_menu_obsbioetica, .7);
 				top: -2rem;
 			}
 		}

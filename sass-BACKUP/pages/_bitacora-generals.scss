@@ -1,0 +1,101 @@
+// ------------------- Content bitacoras  ------------------- //
+.region-content-second{
+	background: $color_brand_white;
+	position: relative;
+	//margin-top: -2rem;
+	@include display-grid;
+	@include grid-parent-2-columns (2fr, 1fr);
+	
+	@media only screen and (max-width: 798px){
+		@include grid-parent-1-columns (1fr);
+	}
+	
+	// Description
+	.descripcion-areas{
+		padding: 4rem;
+		float: left;
+		position: relative;
+		@include grid-child-column (1, 2);
+		@include grid-child-row (1, 2);
+		
+		@media only screen and (max-width: 798px){
+			@include reset-grid-childs;
+		}
+		
+		&:after{
+			position: absolute;
+			content: "";
+			height: 1px;
+			width: 45px;
+			background: $color-aqua;
+			bottom: 0px;
+			left: 0rem;
+		}
+		
+		.field--name-body{
+			p{
+				font: $font-txt-xl $font-baser;
+				line-height: 24px;
+			}
+		}
+	}
+	
+	// Section left content
+	section[class*="block-views-blockbitacoras-por-area-block-"]{
+		padding: 4rem;
+		position: relative;
+		@include grid-child-column (1, 2);
+		//@include grid-child-row (2, 3);
+		
+		@media only screen and (max-width: 798px){
+			@include reset-grid-childs;
+		}
+		
+		&:after{
+			position: absolute;
+			content: "";
+			height: 1px;
+			width: 45px;
+			background: $color-aqua;
+			bottom: 0px;
+			left: 0rem;
+		}
+		&:last-child{
+			&:after{
+				display: none;
+			}
+		}
+		
+		// Title elements
+		.view-header{
+			h3{
+				color: $color-aqua;
+			}
+			p{
+				margin-bottom: 1rem;
+			}
+		}
+		
+		// Accordion
+		.view-content{
+			@include accordion;
+		}
+	}
+	
+	// block next events
+	.contenedor-proximos-eventos{
+		padding: 4rem;
+		top: -7.4rem;
+		right: 0px;
+		width: 100%;
+		@include grid-child-column (2, 3);
+		@include grid-child-row (1, 10);
+		
+		@media only screen and (max-width: 798px){
+			top: initial;
+			@include reset-grid-childs;
+		}
+		
+	}
+	
+}
